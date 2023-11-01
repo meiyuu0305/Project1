@@ -1,12 +1,12 @@
 /* shared rules */
-html .person {
+html.person {
     background-color: white;
 }
 
 /*rules for phone */
 @media only screen and (max-width: 480px)
 {
-    div .container {
+    div.container {
         background-color: bisque;
         border-style: solid;
         border-color: black;
@@ -18,7 +18,7 @@ html .person {
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    div .container {
+    div.container {
         background-color: bisque;
         border-style: solid;
         border-color: black;
@@ -30,7 +30,7 @@ html .person {
 
 @media only screen and (min-width: 769px)
 {
-    div .container {
+    div.container {
         background-color: bisque;
         border-style: solid;
         border-color: black;
