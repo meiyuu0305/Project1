@@ -1,1 +1,39 @@
+/* shared rules */
+html .person {
+    background-color: white;
+}
 
+/*rules for phone */
+@media only screen and (max-width: 480px)
+{
+    div .container {
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: thin;
+    }
+}
+
+/*rules for tablets */
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    div .container {
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: medium;
+    }
+}
+
+/*rules for desktops */
+
+@media only screen and (min-width: 769px)
+{
+    div .container {
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: thick;
+    }
+}
