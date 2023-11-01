@@ -35,5 +35,8 @@ html.person {
         border-style: solid;
         border-color: black;
         border-width: thick;
+        
+        display: grid;
+        justify-items: center;
     }
 }
