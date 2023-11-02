@@ -21,6 +21,37 @@ html.person {
                              "inProg"
                              "done";
     }
+
+    .item {
+        min-height: 200px;
+
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    div.toDo {
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 3;
+        grid-column: 1;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        grid-area: done;
+        grid-row: 4;
+        grid-column: 1;
+        background-color: rgba(197, 252, 154, 0.85);
+    }
 }
 
 /*rules for tablets */
@@ -40,6 +71,37 @@ html.person {
                              "toDo"
                              "inProg"
                              "done";
+    }
+
+    .item {
+        min-height: 200px;
+
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    div.toDo {
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 3;
+        grid-column: 1;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        grid-area: done;
+        grid-row: 4;
+        grid-column: 1;
+        background-color: rgba(197, 252, 154, 0.85);
     }
 }
 
