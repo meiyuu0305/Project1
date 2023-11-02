@@ -120,6 +120,7 @@ html.person {
         display: grid;
         justify-items: center;
         gap: 5px;
+
         grid-template-areas: ". title ."
                              "toDo inProg done";
     }
@@ -133,6 +134,9 @@ html.person {
         grid-area: title;
         grid-row: 1;
         grid-column: 2;
+
+        font-size: 20px;
+        font-weight: bold;
     }
     div.toDo {
         grid-area: toDo;
