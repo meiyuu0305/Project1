@@ -3,5 +3,33 @@
 <!DOCTYPE html>
 
 <html id="taskForm">
-    
+    <body>
+        <header>
+            <nav class="menu">
+                <p>Person 1's Task Management</p>
+                <div id="animatation"></div>
+                <div class="menuitems">
+                    <ul>
+                        <li><a href="main.html">Team Java</a></li>
+                        <li><a href="person1.html">Person 1</a></li>
+                        <li><a href="newPerson.html">Add New Team Member</a></li>
+                        <li><a href="newTask.html">Add New Task</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <form method="post">
+            <fieldset>
+                <legend>Add New Task:</legend>
+                <p>
+                    <label>Task: </label>
+                    <input type="text" name="task" />
+                </p>
+                <p>
+                    <label>Due Date: </label>
+                    <input type="date" name="duedate" />
+                </p>
+            </fieldset>
+        </form>
+    </body>
 </html>
