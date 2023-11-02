@@ -58,20 +58,20 @@ html.person {
         grid-area: toDo;
         grid-row: 2;
         grid-column: 1;
-        background-color: rgba(237, 88, 88, 0.85)
+        background-color: rgba(254, 155, 155, 0.85)
     }
 
     div.inProg {
         grid-area: inProg;
         grid-row: 2;
         grid-column: 2;
-        background-color: rgba(255, 240, 77, 0.85);
+        background-color: rgba(255, 246, 150, 0.85);
     }
 
     div.done {
         grid-area: done;
         grid-row: 2;
         grid-column: 3;
-        background-color: rgba(154, 255, 76, 0.85);
+        background-color: rgba(197, 252, 154, 0.85);
     }
 }
