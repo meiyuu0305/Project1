@@ -1,1 +1,164 @@
+/* shared rules */
+html.person {
+    background-color: white;
+}
 
+/*rules for phone */
+@media only screen and (max-width: 480px)
+{
+    div.container {
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: thin;
+
+        display: grid;
+        justify-items: center;
+        gap: 5px;
+        grid-template-columns: 500px auto 500px;
+        grid-template-areas: "title"
+                             "toDo"
+                             "inProg"
+                             "done";
+    }
+
+    .item {
+        min-height: 100px;
+        justify-self: stretch;
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    div.toDo {
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 3;
+        grid-column: 1;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        grid-area: done;
+        grid-row: 4;
+        grid-column: 1;
+        background-color: rgba(197, 252, 154, 0.85);
+    }
+}
+
+/*rules for tablets */
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    div.container {
+        
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: medium;
+
+        display: grid;
+        justify-items: center;
+        gap: 5px;
+        grid-template-areas: "title"
+                             "toDo"
+                             "inProg"
+                             "done";
+    }
+
+    .item {
+        min-height: 200px;
+        justify-self: stretch;
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    div.toDo {
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 3;
+        grid-column: 1;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        grid-area: done;
+        grid-row: 4;
+        grid-column: 1;
+        background-color: rgba(197, 252, 154, 0.85);
+    }
+}
+
+/*rules for desktops */
+
+@media only screen and (min-width: 769px)
+{
+    .container {
+        min-height: 800px;
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: thick;
+
+        display: grid;
+        justify-items: center;
+        gap: 5px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 50px auto;
+        grid-template-areas: ". title ."
+                             "toDo inProg done";
+    }
+
+    .item {
+        min-height: 200px;
+        justify-self: stretch;
+
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 2;
+        max-height: 50px;
+
+        font-size: 25px;
+        font-weight: bold;
+    }
+    div.toDo {
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 2;
+        grid-column: 2;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        grid-area: done;
+        grid-row: 2;
+        grid-column: 3;
+        background-color: rgba(197, 252, 154, 0.85);
+    }
+}
