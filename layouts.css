@@ -44,9 +44,7 @@ html.person {
                              "toDo inProg done";
     }
 
-    .item {
-        min-height: 200px;
-    }
+    
 
     p.title {
         grid-area: title;
