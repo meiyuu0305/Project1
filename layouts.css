@@ -35,8 +35,29 @@ html.person {
         border-style: solid;
         border-color: black;
         border-width: thick;
-        
+
         display: grid;
         justify-items: center;
+    }
+
+    div.toDo {
+        min-height: 50px;
+        grid-row: 1;
+        grid-column: 1;
+
+    }
+
+    div.inProg {
+        min-height: 50px;
+        grid-row: 1;
+        grid-column: 2;
+
+    }
+
+    div.done {
+        min-height: 50px;
+        grid-row: 1;
+        grid-column: 3;
+        
     }
 }
