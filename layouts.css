@@ -78,6 +78,7 @@ div.done td {
     .item {
         min-height: 100px;
         justify-self: stretch;
+        align-self: center;
         margin: 0px 5px;
     }
 
