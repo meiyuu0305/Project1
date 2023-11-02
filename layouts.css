@@ -134,6 +134,7 @@ html.person {
         grid-area: title;
         grid-row: 1;
         grid-column: 2;
+        max-height: 50px;
 
         font-size: 25px;
         font-weight: bold;
