@@ -25,7 +25,7 @@ html.person {
     .item {
         min-height: 100px;
         justify-self: stretch;
-        margin: 5px 0px;
+        margin: 0px 5px;
     }
 
     p.title {
@@ -78,7 +78,7 @@ html.person {
     .item {
         min-height: 200px;
         justify-self: stretch;
-        margin: 5px 0px;
+        margin: 0px 5px;
     }
 
     p.title {
