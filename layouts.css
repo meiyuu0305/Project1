@@ -132,6 +132,7 @@ div.done td {
     .item {
         min-height: 200px;
         justify-self: stretch;
+        align-self: center;
         margin: 0px 5px;
     }
 
@@ -185,7 +186,7 @@ div.done td {
     .item {
         min-height: 200px;
         justify-self: stretch;
-
+        align-self: center;
     }
 
     p.title {
