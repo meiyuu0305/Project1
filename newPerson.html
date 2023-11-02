@@ -2,7 +2,10 @@
 
 <!DOCTYPE html>
 
-<html id="personForm">
+<html>
+    <head>
+        <script src="newPerson.js"></script>
+    </head>
     <body>
         <header>
             <nav class="menu">
@@ -18,16 +21,16 @@
                 </div>
             </nav>
         </header>
-        <form method="post">
+        <form id="personForm" method="post">
             <fieldset>
                 <legend>Add New Team Member</legend>
                 <p>
-                    <label>First Name: </label>
-                    <input type="text" name="firstname" />
+                    <label for="f-firstname">First Name: </label>
+                    <input type="text" name="firstname" placeholder="First" id="f-firstname" />
                 </p>
                 <p>
-                    <label>Last Name: </label>
-                    <input type="text" name="lastname" />
+                    <label for="f-lastname">Last Name: </label>
+                    <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
                 </p>
                 <input type="reset" />
                 <input type="submit" />
