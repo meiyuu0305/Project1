@@ -11,6 +11,15 @@ html.person {
         border-style: solid;
         border-color: black;
         border-width: thin;
+
+        display: grid;
+        justify-items: center;
+        gap: 5px;
+        grid-template-columns: 500px auto 500px;
+        grid-template-areas: "title"
+                             "toDo"
+                             "inProg"
+                             "done";
     }
 }
 
@@ -23,6 +32,14 @@ html.person {
         border-style: solid;
         border-color: black;
         border-width: medium;
+
+        display: grid;
+        justify-items: center;
+        gap: 5px;
+        grid-template-areas: "title"
+                             "toDo"
+                             "inProg"
+                             "done";
     }
 }
 
@@ -39,7 +56,6 @@ html.person {
         display: grid;
         justify-items: center;
         gap: 5px;
-        grid-template-columns: 500px auto 500px;
         grid-template-areas: ". title ."
                              "toDo inProg done";
     }
