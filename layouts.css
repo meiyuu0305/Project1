@@ -78,7 +78,6 @@ div.done td {
     .item {
         min-height: 100px;
         justify-self: stretch;
-        align-self: center;
         margin: 0px 5px;
     }
 
@@ -132,7 +131,6 @@ div.done td {
     .item {
         min-height: 200px;
         justify-self: stretch;
-        align-self: center;
         margin: 0px 5px;
     }
 
@@ -175,7 +173,6 @@ div.done td {
         border-width: thick;
 
         display: grid;
-        justify-content: center;
         gap: 5px;
         grid-template-columns: auto auto auto;
         grid-template-rows: 50px auto;
