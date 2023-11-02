@@ -120,7 +120,7 @@ html.person {
         display: grid;
         justify-items: center;
         gap: 5px;
-        grid-template-columns: 500px auto auto;
+        grid-template-columns: auto auto auto;
         grid-template-rows: 50px auto;
         grid-template-areas: ". title ."
                              "toDo inProg done";
@@ -128,6 +128,7 @@ html.person {
 
     .item {
         min-height: 200px;
+        min-width: 300px;
 
     }
 
