@@ -175,7 +175,7 @@ div.done td {
         border-width: thick;
 
         display: grid;
-        justify-items: center;
+        justify-content: center;
         gap: 5px;
         grid-template-columns: auto auto auto;
         grid-template-rows: 50px auto;
@@ -186,7 +186,6 @@ div.done td {
     .item {
         min-height: 200px;
         justify-self: stretch;
-        justify-content: center;
     }
 
     p.title {
