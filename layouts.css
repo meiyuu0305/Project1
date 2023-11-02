@@ -3,6 +3,11 @@ html.person {
     background-color: white;
 }
 
+table caption {
+    font-size: 16px
+    font-weight: bold;
+}
+
 div.toDo table {
     border: solid 5px rgb(68, 0, 0);
 }
@@ -188,29 +193,5 @@ div.done td {
         grid-row: 2;
         grid-column: 3;
         background-color: rgba(197, 252, 154, 0.85);
-    }
-
-    div.toDo table {
-        border: solid 5px rgb(68, 0, 0);
-    }
-
-    div.inProg table {
-        border: solid 5px rgb(80, 80, 0);
-    }
-
-    div.done table {
-        border: solid 5px rgb(0, 87, 0);
-    }
-
-    div.toDo td {
-        border: solid 1px rgb(68, 0, 0);
-    }
-
-    div.inProg td {
-        border: solid 1px rgb(80, 80, 0);
-    }
-
-    div.done td {
-        border: solid 1px rgb(0, 87, 0);
     }
 }
