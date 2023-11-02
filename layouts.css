@@ -38,10 +38,12 @@ html.person {
 
         display: grid;
         justify-items: center;
-        grid-template-columns: 200px auto 200px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "toDo" "inProg" "done";
     }
 
     div.toDo {
+        grid-area: toDo;
         min-height: 50px;
         grid-row: 1;
         grid-column: 1;
@@ -49,13 +51,15 @@ html.person {
     }
 
     div.inProg {
+        grid-area: inProg;
         min-height: 50px;
-        grid-row: 2;
-        grid-column: 1;
+        grid-row: 1;
+        grid-column: 2;
 
     }
 
     div.done {
+        grid-area: done;
         min-height: 50px;
         grid-row: 1;
         grid-column: 3;
