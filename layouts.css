@@ -39,12 +39,15 @@ html.person {
         display: grid;
         justify-items: center;
         gap: 5px;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 500px 1fr 1fr;
         grid-template-areas: ". title ."
                              "toDo inProg done";
     }
 
-    
+    .item {
+        min-height: 200px;
+
+    }
 
     p.title {
         grid-area: title;
