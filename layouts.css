@@ -30,7 +30,7 @@ html.person {
 
 @media only screen and (min-width: 769px)
 {
-    div.container {
+    .container {
         background-color: bisque;
         border-style: solid;
         border-color: black;
@@ -42,12 +42,16 @@ html.person {
         grid-template-areas: "toDo" "inProg" "done";
     }
 
+    .item {
+        min-height: 200px;
+    }
+
     div.toDo {
         grid-area: toDo;
         min-height: 50px;
         grid-row: 1;
         grid-column: 1;
-
+        background-color: rgba(237, 88, 88, 0.85)
     }
 
     div.inProg {
@@ -55,7 +59,7 @@ html.person {
         min-height: 50px;
         grid-row: 1;
         grid-column: 2;
-
+        background-color: rgba(255, 240, 77, 0.85);
     }
 
     div.done {
@@ -63,6 +67,6 @@ html.person {
         min-height: 50px;
         grid-row: 1;
         grid-column: 3;
-
+        background-color: rgba(154, 255, 76, 0.85);
     }
 }
