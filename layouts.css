@@ -46,7 +46,7 @@ html.person {
         min-height: 200px;
     }
 
-    div.toDo {
+    div.container div.toDo {
         grid-area: toDo;
         min-height: 50px;
         grid-row: 1;
