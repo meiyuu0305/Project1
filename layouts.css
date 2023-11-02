@@ -186,7 +186,7 @@ div.done td {
     .item {
         min-height: 200px;
         justify-self: stretch;
-        align-items: center;
+        justify-content: center;
     }
 
     p.title {
