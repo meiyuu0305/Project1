@@ -1,7 +1,7 @@
 const taskJSONText = document.getElementById("taskJSONResult");
 taskJSONText.innerHTML = localStorage.getItem("JSONInfoTask");
 const formTask = document.querySelector("#taskForm");
-formPerson.addEventListener("submit", function (e) {
+formTask.addEventListener("submit", function (e) {
     let task = document.querySelector("#f-task").value;
     if(task==null || task=="") {
         alert("Enter a task to be assigned");
