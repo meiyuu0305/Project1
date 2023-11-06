@@ -3,11 +3,7 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        
-    </head>
     <body>
-        
         <header>
             <nav class="menu">
                 <p>Person 1's Task Management</p>
@@ -22,7 +18,6 @@
                 </div>
             </nav>
         </header>
-        <script src="newPerson.js"></script>
         <form id="personForm" method="post">
             <fieldset>
                 <legend>Add New Team Member</legend>
@@ -38,6 +33,30 @@
                 <input type="submit" />
             </fieldset>
         </form>
-        <p id="finalJSONText">Team Member Info</p>
+        <p id="personJSONResult">Team Member Info</p>
+
+        <script>
+            const personJSONText = document.getElementById("personJSONResult");
+            personJSONText.innerHTML = localStorage.getItem("JSONInfo1");
+            const formPerson = document.querySelector("#personForm");
+            formPerson.addEventListener("submit", function (e) {
+                let fname = document.querySelector("#f-firstname").value;
+                if(fname==null || fname=="") {
+                    alert("Enter first name");
+                    e.preventDefault();
+                    return;
+                }
+                let lname = document.querySelector("#f-lastname").value;
+                if(lname==null || lname=="") {
+                    alert("Enter last name");
+                    e.preventDefault();
+                    return;
+                }
+
+                const teamMemberInfo = {FirstName:fname, LastName:lname};
+                let personTextJSON = JSON.stringify(teamMemberInfo);
+                localStorage.setItem("JSONInfo1", personTextJSON);
+            });
+        </script>
     </body>
 </html>
