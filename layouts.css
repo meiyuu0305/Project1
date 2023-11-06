@@ -8,10 +8,25 @@ table caption {
     font-weight: bold;
 }
 
-tbody tr:hover {
+div.toDo tbody tr:hover {
     font-weight: bold;
-    background-color: rgb(0, 149, 255);
-    color: white;
+    background-color: rgb(0, 0, 0);
+    color: rgba(254, 155, 155);
+    transition: background-color 0.5s linear;
+}
+
+div.inProg tbody tr:hover {
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 246, 150);
+    transition: background-color 0.5s linear;
+}
+
+div.done tbody tr:hover {
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    color: rgba(197, 252, 154);
+    transition: background-color 0.5s linear;
 }
 
 div.toDo table {
