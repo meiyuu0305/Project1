@@ -8,8 +8,15 @@ formTask.addEventListener("submit", function (e) {
         e.preventDefault();
         return;
     }
+    let fdueDate = document.querySelector("f-dueDate").value;
+    if(fdueDate==null || fdueDate=="") {
+        alert("Select a due date");
+        e.preventDefault();
+        return;
+    }
 
-    const taskInfo = {Task:ftask};
+
+    const taskInfo = {Task:ftask, DueDate:fduedate};
     let taskTextJSON = JSON.stringify(taskInfo);
     localStorage.setItem("JSONInfoTask", taskTextJSON);
 });
