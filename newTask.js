@@ -9,7 +9,7 @@ formTask.addEventListener("submit", function (e) {
         return;
     }
     let fteamMember = document.querySelector("#f-teamMember").value;
-    if(fdueDate==null || fdueDate=="") {
+    if(fteamMember==null || fteamMember=="") {
         alert("Choose a team member to assign the task to");
         e.preventDefault();
         return;
