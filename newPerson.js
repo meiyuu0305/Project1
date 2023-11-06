@@ -1,5 +1,5 @@
 const personJSONText = document.getElementById("personJSONResult");
-personJSONText.innerHTML = localStorage.getItem("JSONInfo1");
+personJSONText.innerHTML = localStorage.getItem("JSONInfoPerson");
 const formPerson = document.querySelector("#personForm");
 formPerson.addEventListener("submit", function (e) {
     let fname = document.querySelector("#f-firstname").value;
@@ -17,5 +17,5 @@ formPerson.addEventListener("submit", function (e) {
 
     const teamMemberInfo = {FirstName:fname, LastName:lname};
     let personTextJSON = JSON.stringify(teamMemberInfo);
-    localStorage.setItem("JSONInfo1", personTextJSON);
+    localStorage.setItem("JSONInfoPerson", personTextJSON);
 });
