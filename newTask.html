@@ -18,18 +18,26 @@
                 </div>
             </nav>
         </header>
-        <form method="post">
+        <form id="taskForm" method="post">
             <fieldset>
                 <legend>Add New Task:</legend>
                 <p>
-                    <label>Task: </label>
-                    <input type="text" name="task" />
+                    <label for="f-task">Task: </label>
+                    <input type="text" name="task" id="f-task" placeholder="Enter task name here..."/>
                 </p>
                 <p>
-                    <label>Due Date: </label>
-                    <input type="date" name="duedate" />
+                    <label for="f-dueDate">Due Date: </label>
+                    <input type="date" name="duedate" id="f-dueDate"/>
                 </p>
+                <p>
+                    <label for="f-teamMembers">Assigned Team Member: </label>
+                    <input type="text" name="assignedMember" id="f-teamMembers" placeholder="First and last name"/>
+                </p>
+                <input type="reset" />
+                <input type="submit" />
             </fieldset>
         </form>
+        <p id="taskJSONResult">Task Information</p>
+        <script src="newTask.js"></script>
     </body>
 </html>
