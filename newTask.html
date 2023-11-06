@@ -39,5 +39,10 @@
         </form>
         <p id="taskJSONResult">Task Information</p>
         <!--<script src="newTask.js"></script> -->
+        <script>
+            const taskJSONText = document.getElementById("taskJSONResult");
+            taskJSONText.innerHTML = localStorage.getItem("JSONInfoTask");
+            const formTask = document.querySelector("#taskForm");
+        </script>
     </body>
 </html>
