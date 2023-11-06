@@ -22,7 +22,7 @@ formTask.addEventListener("submit", function (e) {
     }
 
 
-    const taskInfo = {Task:ftask, TeamMember:fteamMember};
+    const taskInfo = {Task:ftask, DueDate:fdueDate, TeamMember:fteamMember};
     let taskTextJSON = JSON.stringify(taskInfo);
     localStorage.setItem("JSONInfoTask", taskTextJSON);
 });
