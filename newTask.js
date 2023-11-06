@@ -9,5 +9,7 @@ formTask.addEventListener("submit", function (e) {
         return;
     }
 
-    
+    const taskInfo = {Task:task};
+    let taskTextJSON = JSON.stringify(taskInfo);
+    localStorage.setItem("JSONInfoTask", taskTextJSON);
 });
