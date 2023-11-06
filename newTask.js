@@ -8,15 +8,15 @@ formTask.addEventListener("submit", function (e) {
         e.preventDefault();
         return;
     }
-    let fdueDate = document.querySelector("f-dueDate").value;
+    let fteamMember = document.querySelector("f-teamMember").value;
     if(fdueDate==null || fdueDate=="") {
-        alert("Select a due date");
+        alert("Choose a team member to assign the task to");
         e.preventDefault();
         return;
     }
 
 
-    const taskInfo = {Task:ftask, DueDate:fduedate};
+    const taskInfo = {Task:ftask, TeamMember:fteamMember};
     let taskTextJSON = JSON.stringify(taskInfo);
     localStorage.setItem("JSONInfoTask", taskTextJSON);
 });
