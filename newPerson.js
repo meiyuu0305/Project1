@@ -1,4 +1,4 @@
-const personJSONText = document.getElementById("personForm");
+const personJSONText = document.getElementById("personJSONResult");
 personJSONText.innerHTML = localStorage.getItem("JSONInfo1");
 const formPerson = document.querySelector("#personForm");
 formPerson.addEventListener("submit", function (e) {
