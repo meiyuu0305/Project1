@@ -8,7 +8,7 @@ formTask.addEventListener("submit", function (e) {
         e.preventDefault();
         return;
     }
-    let fteamMember = document.querySelector("f-teamMember").value;
+    let fteamMember = document.querySelector("#f-teamMember").value;
     if(fdueDate==null || fdueDate=="") {
         alert("Choose a team member to assign the task to");
         e.preventDefault();
