@@ -22,6 +22,6 @@ formTask.addEventListener("submit", function (e) {
     }
 
     const taskInfo = {Task:ftask, DueDate:fdate, TeamMember:fteamMember};
-    let taskJSONText = JSON.stringify(taskInfo);
-    localStorage.setItem("JSONInfoTask", taskJSONText);
+    let taskTextJSON = JSON.stringify(taskInfo);
+    localStorage.setItem("JSONInfoTask", taskTextJSON);
 });
