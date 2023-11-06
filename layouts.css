@@ -3,78 +3,78 @@ html.person {
     background-color: white;
 }
 
-table caption {
+html.person table caption {
     font-size: 20px;
     font-weight: bold;
 }
 
-div.toDo tbody tr:hover {
+html.person div.toDo tbody tr:hover {
     font-weight: bold;
     background-color: rgb(0, 0, 0);
     color: rgba(254, 155, 155);
     transition: background-color 0.5s linear;
 }
 
-div.inProg tbody tr:hover {
+html.person div.inProg tbody tr:hover {
     font-weight: bold;
     background-color: rgb(0, 0, 0);
     color: rgba(255, 246, 150);
     transition: background-color 0.5s linear;
 }
 
-div.done tbody tr:hover {
+html.person div.done tbody tr:hover {
     font-weight: bold;
     background-color: rgb(0, 0, 0);
     color: rgba(197, 252, 154);
     transition: background-color 0.5s linear;
 }
 
-div.toDo table {
+html.person div.toDo table {
     border: solid 5px rgb(68, 0, 0);
 }
 
-div.toDo th {
+html.person div.toDo th {
     font-size: 16px;
     background-color: rgb(125, 0, 0);
     color: white;
 }
 
-div.inProg table {
+html.person div.inProg table {
     border: solid 5px rgb(80, 80, 0);
 }
 
-div.inProg th {
+html.person div.inProg th {
     font-size: 16px;
     background-color: rgb(106, 92, 1);
     color: white;
 }
 
-div.done table {
+html.person div.done table {
     border: solid 5px rgb(0, 87, 0);
 }
 
-div.done th {
+html.person div.done th {
     font-size: 16px;
     background-color: rgb(0, 125, 0);
     color: white;
 }
 
-div.toDo td {
+html.person div.toDo td {
     border: solid 1px rgb(68, 0, 0);
 }
 
-div.inProg td {
+html.person div.inProg td {
     border: solid 1px rgb(80, 80, 0);
 }
 
-div.done td {
+html.person div.done td {
     border: solid 1px rgb(0, 87, 0);
 }
 
 /*rules for phone */
 @media only screen and (max-width: 480px)
 {
-    div.container {
+    html.person div.container {
         background-color: bisque;
         border-style: solid;
         border-color: black;
@@ -90,32 +90,32 @@ div.done td {
                              "done";
     }
 
-    .item {
+    html.person .item {
         min-height: 100px;
         justify-self: stretch;
         margin: 0px 5px;
     }
 
-    p.title {
+    html.person p.title {
         grid-area: title;
         grid-row: 1;
         grid-column: 1;
     }
-    div.toDo {
+    html.person div.toDo {
         grid-area: toDo;
         grid-row: 2;
         grid-column: 1;
         background-color: rgba(254, 155, 155, 0.85)
     }
 
-    div.inProg {
+    html.person div.inProg {
         grid-area: inProg;
         grid-row: 3;
         grid-column: 1;
         background-color: rgba(255, 246, 150, 0.85);
     }
 
-    div.done {
+    html.person div.done {
         grid-area: done;
         grid-row: 4;
         grid-column: 1;
@@ -127,7 +127,7 @@ div.done td {
 
 @media only screen and (min-width: 481px) and (max-width: 768px)
 {
-    div.container {
+    html.person div.container {
         
         background-color: bisque;
         border-style: solid;
@@ -143,32 +143,32 @@ div.done td {
                              "done";
     }
 
-    .item {
+    html.person .item {
         min-height: 200px;
         justify-self: stretch;
         margin: 0px 5px;
     }
 
-    p.title {
+    html.person p.title {
         grid-area: title;
         grid-row: 1;
         grid-column: 1;
     }
-    div.toDo {
+    html.person div.toDo {
         grid-area: toDo;
         grid-row: 2;
         grid-column: 1;
         background-color: rgba(254, 155, 155, 0.85)
     }
 
-    div.inProg {
+    html.person div.inProg {
         grid-area: inProg;
         grid-row: 3;
         grid-column: 1;
         background-color: rgba(255, 246, 150, 0.85);
     }
 
-    div.done {
+    html.person div.done {
         grid-area: done;
         grid-row: 4;
         grid-column: 1;
@@ -180,7 +180,7 @@ div.done td {
 
 @media only screen and (min-width: 769px)
 {
-    .container {
+    html.person .container {
         min-height: 800px;
         background-color: bisque;
         border-style: solid;
@@ -195,12 +195,12 @@ div.done td {
                              "toDo inProg done";
     }
 
-    .item {
+    html.person .item {
         min-height: 200px;
         justify-self: stretch;
     }
 
-    p.title {
+    html.person p.title {
         grid-area: title;
         grid-row: 1;
         grid-column: 2;
@@ -209,7 +209,7 @@ div.done td {
         font-size: 25px;
         font-weight: bold;
     }
-    div.toDo {
+    html.person div.toDo {
         margin-left: 5px;
         grid-area: toDo;
         grid-row: 2;
@@ -217,14 +217,14 @@ div.done td {
         background-color: rgba(254, 155, 155, 0.85)
     }
 
-    div.inProg {
+    html.person div.inProg {
         grid-area: inProg;
         grid-row: 2;
         grid-column: 2;
         background-color: rgba(255, 246, 150, 0.85);
     }
 
-    div.done {
+    html.person div.done {
         margin-right: 5px;
         grid-area: done;
         grid-row: 2;
