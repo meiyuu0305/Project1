@@ -8,6 +8,12 @@ formTask.addEventListener("submit", function (e) {
         e.preventDefault();
         return;
     }
+    let fdueDate = document.querySelector("#f-dueDate").value;
+    if(fdueDate==null || fdueDate=="") {
+        alert("Choose a due date");
+        e.preventDefault();
+        return;
+    }
     let fteamMember = document.querySelector("#f-teamMember").value;
     if(fteamMember==null || fteamMember=="") {
         alert("Choose a team member to assign the task to");
