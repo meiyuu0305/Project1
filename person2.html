@@ -1,74 +1,96 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Person 2's task </title>
-</head>
-<body style="display: flex;">
-    <div class = "menu1">
-        <ul class = "menu_content"> 
-            <li><a id="account_name"> Andy </a></li> <!-- Task: Add links -->
-            <li><a id= link href="frontpage.html">Front Page</a></li>
-            <li><a id="link" href="person1.html"> Person 1 </a></li>
-            <li><a id="sub_link"> Sub links </a></li>
-            <li><a id="sub_link"> Sub links </a></li>
-            <li><a id="sub_link"> Sub links </a></li>
-            <li><a id="link" href="person2.html"> Person 2 </a></li>
-            <li><a id="settings"> Settings </a></li>
-        </ul>
-    </div> 
-    
-    <div class = "container_task_page" > 
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Task 1</p>
-            <input type="text" name="task1" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Task 2</p>
-            <input type="text" name="task1" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Task 3</p>
-            <input type="text" name="task1" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Task 4</p>
-            <input type="text" name="task1" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Task 5</p>
-            <input type="text" name="task1" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Task 6</p>
-            <input type="text" name="task1" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Task 7</p>
-            <input type="text" name="task1" placeholder="Your task..">
-        </form>
-    </div>
-    
-    </div>
-    </div>
-    
-</body>
+
+<html class="person">
+    <head>
+        <title>Person 2</title>
+        <link rel="stylesheet" type="text/css" href="layouts.css">
+    </head>
+    <body>
+        <div class="container">
+            <p class="title">Person 2's Tasks</p>
+            <div class = "menu1">
+                <ul class = "menu_content"> 
+                    <li><a id="account_name" class="link" href="team.html"> Team Java </a></li> <!-- Task: Add links -->
+                    <li><a class= link href="frontpage.html">Front Page</a></li>
+                    <li><a class="link" href="person1.html"> Person 1 </a></li>
+                    <li><a id="sub_link"> Sub links </a></li>
+                    <li><a id="sub_link"> Sub links </a></li>
+                    <li><a id="sub_link"> Sub links </a></li>
+                    <li><a class="link" href="person2.html"> Person 2 </a></li>
+                    <li><a class="link" href="person3.html"> Person 3 </a></li>
+                    <li><a class="link" href="person4.html"> Person 4 </a></li>
+                    <li><a class="link" href="person5.html"> Person 5 </a></li>
+                    <li><a class="link" href="person6.html"> Person 6 </a></li>
+                    <li><a class="link" href="newPerson.html">Add New Team Member</a></li>
+                    <li><a class="link" href="newTask.html">Add New Task</a></li>
+                    <li><a id="settings"> Settings </a></li>
+                </ul>
+            </div>
+            <div class="toDo item">
+                <table>
+                    <caption>TO DO:</caption>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Resident engagement</td>
+                            <td>talk to all new residents</td>
+                            <td>08/30/2023</td>
+                        </tr>
+                        <tr>
+                            <td>CS 315 project</td>
+                            <td>newTask html file</td>
+                            <td>11/05/2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="inProg item">
+                    <table>
+                    <caption>IN PROGRESS:</caption>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RA Training</td>
+                            <td>Turn in fall schedule</td>
+                            <td>08/15/2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="done item">
+                <table>
+                    <caption>FINISHED:</caption>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                            <th>Date Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Class Prep</td>
+                            <td>Purchase textbooks</td>
+                            <td>08/22/2023</td>
+                            <td>08/13/2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
 </html>

@@ -51,7 +51,7 @@ body{
     text-decoration: none;
     color: white;
 }
-#link{
+.link{
     display: block;
     height: 40px;
     margin: 10px 0px 10px -20px;
@@ -219,7 +219,7 @@ body{
     font-family: 'VT323', monospace;
     text-align: center;
 }
-.task_widget{
+.person_widget{
     width: 250px;
     height: 150px;
     border-radius: 10%;
@@ -237,11 +237,11 @@ body{
     color: black;
     font-family: 'VT323', monospace;
 }
-.task_widget:nth-child(n+4){
+.person_widget:nth-child(n+4){
     top : 200px;
     left: 40px;
 }
-.task_widget:nth-child(n+7){
+.person_widget:nth-child(n+7){
     top: 220px;
     left:0px;
 }
@@ -252,7 +252,7 @@ body{
     align-items: center; 
     height: 100vh;/* Align vertically*/
 }
-.container_task_page{
+.container_team_page{
     display: grid;
     gap: 5px;
     grid-template-columns: auto auto auto;
