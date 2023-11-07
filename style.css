@@ -716,4 +716,8 @@ html.person div.done td {
         color: white;
     }
 }
+
+html.form {
+    background-image: url(background.jpg);
+}
 /*END*/
