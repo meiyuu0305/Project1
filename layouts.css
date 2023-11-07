@@ -231,7 +231,7 @@ html.person div.done td {
 
     html.person div.done {
         grid-area: done;
-        grid-row: 4;
+        grid-row: 5;
         grid-column: 1;
         background-color: rgba(197, 252, 154, 0.85);
     }
