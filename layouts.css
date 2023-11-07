@@ -139,7 +139,8 @@ html.person div.done td {
         display: grid;
         justify-items: center;
         gap: 5px;
-        grid-template-areas: "title"
+        grid-template-areas: "menu1"
+                            "title"
                              "toDo"
                              "inProg"
                              "done";
@@ -153,19 +154,20 @@ html.person div.done td {
 
     html.person p.title {
         grid-area: title;
-        grid-row: 1;
+        grid-row: 2;
         grid-column: 1;
+        font-size: 32px;
     }
     html.person div.toDo {
         grid-area: toDo;
-        grid-row: 2;
+        grid-row: 3;
         grid-column: 1;
         background-color: rgba(254, 155, 155, 0.85)
     }
 
     html.person div.inProg {
         grid-area: inProg;
-        grid-row: 3;
+        grid-row: 4;
         grid-column: 1;
         background-color: rgba(255, 246, 150, 0.85);
     }
@@ -175,6 +177,61 @@ html.person div.done td {
         grid-row: 4;
         grid-column: 1;
         background-color: rgba(197, 252, 154, 0.85);
+    }
+
+    .menu1 {
+        background-color: #12151C;
+        border-color: rgb(248,244,163);
+        border-style:outset;
+        border-width: 3px;
+        grid-area: menu1;
+        grid-row: 1;
+    }
+    
+    .menu_button{
+        display:block;
+        height: 40px;
+        width: 40px;
+        position:absolute;
+        top:0px;
+        left:150px;
+        background-image: url(menu_button.png);
+        background-color: #12151C;
+    }
+    .menu_content{
+        font-size: 27px;
+        color: white;
+        font-family: 'VT323', monospace;
+        list-style-type: none;
+    }
+    #account_name{
+        display: block;
+        margin:-25px 0px 30px;
+        font-size: 40px;
+        text-decoration: none;
+        color: white;
+    }
+    .link{
+        display: block;
+        height: 40px;
+        margin: 10px 0px 10px -20px;
+        text-decoration: none;
+        color: white;
+    }
+    #sub_link{
+        display: block;
+        height: 30px;
+        font-size: 23px;
+        text-decoration: none;
+        color: white;
+    }
+    #settings{
+        position: absolute;
+        bottom: 15px;
+        margin-left: -30px;
+        font-size: 32px;
+        text-decoration: none;
+        color: white;
     }
 }
 
@@ -241,7 +298,6 @@ html.person div.done td {
         border-width: 3px;
         grid-area: menu1;
         grid-column: 1;
- 
     }
     
     .menu_button{
