@@ -7,15 +7,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
     <title>planets</title>
 </head>
-<body>
-    <div class = "menu_button"></div>
+<body class ="front_page_body">
+    <button class="menu_button" onclick="nav_bar_present()"> </button>
+    <script > 
+       //hide the navbar
+    </script>
+    <div class = "menu1">
+    <ul class = "menu_content"> 
+        <li><a id="account_name"> Andy </a></li> <!-- Task: Add links -->
+        <li><a id= link href="frontpage.html">Front Page</a></li>
+        <li><a id="link" href="person1.html"> Person 1 </a></li>
+        <li><a id="sub_link"> Sub links </a></li>
+        <li><a id="sub_link"> Sub links </a></li>
+        <li><a id="sub_link"> Sub links </a></li>
+        <li><a id="link" href="person2.html"> Person 2 </a></li>
+        <li><a id="settings"> Settings </a></li>
+    </ul>
+    </div> 
     <div class = "fun_fact">
-        <p id="on_this_day">On this day:</p>
+        <p id="on_this_day">Today's Date</p>
+        <script> 
+            const d = new Date(); 
+            var i = String(d.getMonth() + 1).padStart(2, '0');
+            var k = String(d.getDate()).padStart(2, '0');
+            var j = d.getFullYear();
+            var str = "Today's Date";
+            var date = str.concat(": ",i ,"-", k, "-", j);
+            document.getElementById("on_this_day").innerHTML = date;
+        </script>
     </div>
-    <div class = "planets-container">
+    <div class = "planets-container"> 
         <div class = sun> </div>
         <div class = "planet-index" id="first-planet-index" >
             <div class ="route">
@@ -24,23 +47,25 @@
                 </div>
             </div>
         </div>
-       
         <div class = "planet-index" id="second-planet-index">
             <div class ="route">
+                <a href= "person1.html" class="person_name"> 
                 <div class = "planet-container" id = "second-planet-container">
-                <div class = "planet" id="second_planet"> </div>
+                <div class = "planet" id="second_planet"> Person 1 </div>
                 </div>
+            </a>
             </div>
         </div>
 
         <div class = "planet-index" id="third-planet-index">
             <div class ="route">
+                <a href ="person2.html" class="person_name">
                 <div class = "planet-container" id = "third-planet-container">
-                <div class = "planet" id="third_planet"> </div>
+                <div class = "planet" id="third_planet"> Person 2</div>
                 </div>
+                  </a>
             </div>
         </div>
-        
     </div>
 </body>
 </html>
