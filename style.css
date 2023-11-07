@@ -51,7 +51,7 @@ body{
     text-decoration: none;
     color: white;
 }
-.link{
+#link{
     display: block;
     height: 40px;
     margin: 10px 0px 10px -20px;
@@ -219,12 +219,13 @@ body{
     font-family: 'VT323', monospace;
     text-align: center;
 }
-.person_widget{
+.task_widget{
     width: 250px;
     height: 150px;
     border-radius: 10%;
     margin: 50px 50px;
     background-color:rgb(255, 253, 253);
+    cursor:move;
     position:relative;
 }
 .heading{
@@ -232,16 +233,17 @@ body{
     margin-top: 0px;
     text-align: center;
     height: 30px;
+    width: 150px;
     background-color: rgb(242, 214, 0);
     font-size: 27px;
     color: black;
     font-family: 'VT323', monospace;
 }
-.person_widget:nth-child(n+4){
+.task_widget:nth-child(n+4){
     top : 200px;
     left: 40px;
 }
-.person_widget:nth-child(n+7){
+.task_widget:nth-child(n+7){
     top: 220px;
     left:0px;
 }
@@ -252,7 +254,7 @@ body{
     align-items: center; 
     height: 100vh;/* Align vertically*/
 }
-.container_team_page{
+.container_task_page{
     display: grid;
     gap: 5px;
     grid-template-columns: auto auto auto;
@@ -263,6 +265,7 @@ body{
     height:100%;
 }
 
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -272,7 +275,6 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
-  
 .box{
     width: 670px;
     height: 50px;
@@ -306,3 +308,225 @@ input[type=text], select {
 
 
 
+
+/* Rebecca's styles*/
+/* shared rules */
+html.person {
+    background-color: white;
+}
+
+table caption {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    font-weight: bold;
+    background-color: rgb(0, 149, 255);
+    color: white;
+}
+
+div.toDo table {
+    border: solid 5px rgb(68, 0, 0);
+}
+
+div.toDo th {
+    font-size: 16px;
+    background-color: rgb(125, 0, 0);
+    color: white;
+}
+
+div.inProg table {
+    border: solid 5px rgb(80, 80, 0);
+}
+
+div.inProg th {
+    font-size: 16px;
+    background-color: rgb(106, 92, 1);
+    color: white;
+}
+
+div.done table {
+    border: solid 5px rgb(0, 87, 0);
+}
+
+div.done th {
+    font-size: 16px;
+    background-color: rgb(0, 125, 0);
+    color: white;
+}
+
+div.toDo td {
+    border: solid 1px rgb(68, 0, 0);
+}
+
+div.inProg td {
+    border: solid 1px rgb(80, 80, 0);
+}
+
+div.done td {
+    border: solid 1px rgb(0, 87, 0);
+}
+
+/*rules for phone */
+@media only screen and (max-width: 480px)
+{
+    div.container {
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: thin;
+
+        display: grid;
+        justify-items: center;
+        gap: 5px;
+        grid-template-columns: 500px auto 500px;
+        grid-template-areas: "title"
+                             "toDo"
+                             "inProg"
+                             "done";
+    }
+
+    .item {
+        min-height: 100px;
+        justify-self: stretch;
+        margin: 0px 5px;
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    div.toDo {
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 3;
+        grid-column: 1;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        grid-area: done;
+        grid-row: 4;
+        grid-column: 1;
+        background-color: rgba(197, 252, 154, 0.85);
+    }
+}
+
+/*rules for tablets */
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+{
+    div.container {
+        
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: medium;
+
+        display: grid;
+        justify-items: center;
+        gap: 5px;
+        grid-template-areas: "title"
+                             "toDo"
+                             "inProg"
+                             "done";
+    }
+
+    .item {
+        min-height: 200px;
+        justify-self: stretch;
+        margin: 0px 5px;
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    div.toDo {
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 3;
+        grid-column: 1;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        grid-area: done;
+        grid-row: 4;
+        grid-column: 1;
+        background-color: rgba(197, 252, 154, 0.85);
+    }
+}
+
+/*rules for desktops */
+
+@media only screen and (min-width: 769px)
+{
+    .container {
+        min-height: 800px;
+        background-color: bisque;
+        border-style: solid;
+        border-color: black;
+        border-width: thick;
+
+        display: grid;
+        gap: 5px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 50px auto;
+        grid-template-areas: ". title ."
+                             "toDo inProg done";
+    }
+
+    .item {
+        min-height: 200px;
+        justify-self: stretch;
+    }
+
+    p.title {
+        grid-area: title;
+        grid-row: 1;
+        grid-column: 2;
+        max-height: 50px;
+
+        font-size: 25px;
+        font-weight: bold;
+    }
+    div.toDo {
+        margin-left: 5px;
+        grid-area: toDo;
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(254, 155, 155, 0.85)
+    }
+
+    div.inProg {
+        grid-area: inProg;
+        grid-row: 2;
+        grid-column: 2;
+        background-color: rgba(255, 246, 150, 0.85);
+    }
+
+    div.done {
+        margin-right: 5px;
+        grid-area: done;
+        grid-row: 2;
+        grid-column: 3;
+        background-color: rgba(197, 252, 154, 0.85);
+    }
+}
+/*END */ 
