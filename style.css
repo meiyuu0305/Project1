@@ -717,7 +717,7 @@ html.person div.done td {
     }
 }
 
-html.form {
+html.form body {
     background-image: url(background.jpg);
 }
 /*END*/
