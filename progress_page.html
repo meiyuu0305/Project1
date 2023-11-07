@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Progress Bar </title>
+</head>
+<body>
+    <div class = "menu1">
+        <ul class = "menu_content"> 
+            <li><a id="account_name"> Andy </a></li> <!-- Task: Add links -->
+            <li><a id= link href="frontpage.html">Front Page</a></li>
+            <li><a id="link" href="person1.html"> Person 1 </a></li>
+            <li><a id="sub_link"> Sub links </a></li>
+            <li><a id="sub_link"> Sub links </a></li>
+            <li><a id="sub_link"> Sub links </a></li>
+            <li><a id="link" href="team.html"> Person 2 </a></li>
+            <li><a id="link" href="progress_page.html"> Progress </a></li>
+            <li><a id="settings"> Settings </a></li>
+        </ul>
+    </div>  
+    <div style = "padding: 0px 150px;" >
+        <div class = "box"> <p class = "heading"> Task 1 </p>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+           
+        </div>
+    </div>
+    <div style = "padding: 20px 150px;">
+        <div class = "box"> <p class = "heading"> Task 2 </p>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+           
+        </div>
+    </div>
+    <div style = "padding: 10px 150px;">
+        <div class = "box"> <p class = "heading"> Task 3</p>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            
+        </div>
+    </div>
+    <div style = "padding: 10px 150px;">
+        <div class = "box"> <p class = "heading"> Task 4</p>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+            <button class = "inner_box"> </button>
+        </div>
+    </div>
+</body>
+<script >
+const buttons = document.querySelectorAll('.inner_box');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+      button.classList.add('active');
+      count_percent++;
+    });
+});
+</script>
+</html>
