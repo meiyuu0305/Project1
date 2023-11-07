@@ -75,7 +75,7 @@ html.person div.done td {
 @media only screen and (max-width: 480px)
 {
     html.person div.container {
-        background-color: rgba(255, 227, 194, 0.75);
+        background-color: rgba(255, 255, 255, 0.5);
         border-style: solid;
         border-color: black;
         border-width: thin;
@@ -129,7 +129,7 @@ html.person div.done td {
 {
     html.person div.container {
         
-        background-color: rgba(255, 227, 194, 0.75);
+        background-color: rgba(255, 255, 255, 0.5);
         border-style: solid;
         border-color: black;
         border-width: medium;
@@ -182,7 +182,7 @@ html.person div.done td {
 {
     html.person .container {
         min-height: 800px;
-        background-color: rgba(255, 227, 194, 0.75);
+        background-color: rgba(255, 255, 255, 0.5);
         border-style: solid;
         border-color: black;
         border-width: thick;
