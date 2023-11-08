@@ -730,7 +730,19 @@ html.form body {
 }
 
 legend {
-    color: whitesmoke;
+    color: rgb(245, 245, 245);
     font-size: 24px;
+}
+
+#taskJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+}
+
+#personJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
 }
 /*END*/
