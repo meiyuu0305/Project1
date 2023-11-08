@@ -716,4 +716,21 @@ html.person div.done td {
         color: white;
     }
 }
+
+html.form {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 150px auto;
+    grid-template-areas: "menu1 body";
+}
+
+html.form body {
+    grid-area: body;
+    grid-column: 2;
+}
+
+legend {
+    color: whitesmoke;
+    font-size: 24px;
+}
 /*END*/
