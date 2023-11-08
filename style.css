@@ -747,4 +747,18 @@ legend {
     font-family: 'VT323', monospace;
     font-size: 20px;
 }
+
+#taskJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+}
+
+#personJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+}
 /*END*/
