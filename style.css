@@ -726,4 +726,49 @@ html.person div.done td {
         color: white;
     }
 }
+
+html.form {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 150px auto;
+    grid-template-areas: "menu1 body";
+}
+
+html.form body {
+    grid-area: body;
+    grid-column: 2;
+}
+
+legend {
+    color: rgb(245, 245, 245);
+    font-size: 24px;
+}
+
+#taskForm p {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+#personForm p {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+#taskJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+}
+
+#personJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+}
 /*END*/
