@@ -1,0 +1,543 @@
+/* My's styling */
+
+.front_page_body {
+    margin: 0;
+    padding: 0;
+    display: flex; /*adjust as screen move*/
+    justify-content: center; /* Align horizontally*/
+    align-items: center; 
+    background-image: url("background.jpg");
+    height: 100vh;/* Align vertically*/
+}
+body{
+    background-image: url("background.jpg");
+}
+.fun_fact{
+    position: absolute;
+    top:0px;
+    right:50px;
+}
+.menu1 {
+    background-color: #12151C;
+    border-color: rgb(248,244,163);
+    border-style:outset;
+    border-width: 3px;
+    position:absolute;
+    height: 100%;
+    width: 150px;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+
+.menu_button{
+    display:block;
+    height: 40px;
+    width: 40px;
+    position:absolute;
+    top:0px;
+    left:150px;
+    background-image: url(menu_button.png);
+    background-color: #12151C;
+}
+.menu_content{
+    font-size: 27px;
+    color: white;
+    font-family: 'VT323', monospace;
+    list-style-type: none;
+}
+#account_name{
+    display: block;
+    margin:-25px 0px 30px;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}
+.link{
+    display: block;
+    height: 40px;
+    margin: 10px 0px 10px -20px;
+    text-decoration: none;
+    color: white;
+}
+#sub_link{
+    display: block;
+    height: 30px;
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}
+#settings{
+    position: absolute;
+    bottom: 15px;
+    margin-left: -30px;
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+}
+#on_this_day{
+    font-size: 40px;
+    color: white;
+    font-family: 'VT323', monospace;
+ }
+.planets-container{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    transform: scaleX(5) ;
+}
+.sun{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(248,244,163);
+    box-shadow: 0 0 80px goldenrod, 0 0 98px rgb(184,160, 26);
+    transform: scaleX(0.2);
+    position: absolute;
+}
+.planet{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    transform: scaleX(0.2);
+    box-shadow: 0 0 20px rgba(108, 107, 97, 0.6);
+}
+#first_planet {
+    background-image: url("earth.jpeg");
+}
+#second_planet{
+    background-image: url("venus.jpeg");
+}
+#third_planet{
+    background-image: url("jupiter.jpeg");
+}
+
+.route{
+    width: 100%;
+    height: 100%;
+    animation: rotate 12s infinite linear;
+    position: absolute;
+}
+.planet-index {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#first-planet-index{
+    animation: hideFirstPlanet 12s infinite;
+}
+#second-planet-index{
+    animation: hideSecondPlanet 12s infinite;
+}
+#third-planet-index{
+    animation: hideThirdPlanet 12s infinite;
+}
+
+@keyframes hideFirstPlanet{
+    0%{
+        z-index: 999;
+        transform: scale(1.1);
+    }
+    75%{
+        z-index: -999;
+        transform: scale(0.9);
+    }
+    100%{
+        z-index: 999;
+        transform: scale(1.1);
+    }
+}
+@keyframes hideSecondPlanet{
+    0%{
+        z-index: -999;
+        transform: scale(0.9);
+    }
+    25%{
+        z-index: 999;
+        transform: scale(1.1);
+    }
+    100%{
+        z-index: -999;
+        transform: scale(0.9);
+    }
+}
+@keyframes hideThirdPlanet{
+    0%{
+        z-index: -999;
+    }
+    25%{
+        z-index: -999;
+        transform: scale(0.9);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+    100%{
+        z-index: 999;
+    }
+}
+
+
+.planet-container{
+    animation: correct 12s infinite linear;
+    width:100px;
+    height:100px;
+    position:absolute;
+}
+#second-planet-container{
+    left: 110px;
+}
+#first-planet-container{
+    left:55px;
+    top:100px;
+}
+#third-planet-container{
+    left:0px;
+    bottom:100px;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes correct {
+    0%{
+        transform: rotateZ(360deg);
+    }
+    360%{
+        transform: rotateZ(0deg);
+    }
+}
+
+
+.person_name{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    font-family: 'VT323', monospace;
+    text-align: center;
+}
+.task_widget{
+    width: 250px;
+    height: 150px;
+    border-radius: 10%;
+    margin: 50px 50px;
+    background-color:rgb(255, 253, 253);
+    cursor:move;
+    position:relative;
+}
+.heading{
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(242, 214, 0);
+    font-size: 27px;
+    color: black;
+    font-family: 'VT323', monospace;
+}
+.task_widget:nth-child(n+4){
+    top : 200px;
+    left: 40px;
+}
+.task_widget:nth-child(n+7){
+    top: 220px;
+    left:0px;
+}
+
+.center{
+    display: flex; /*adjust as screen move*/
+    justify-content: center; /* Align horizontally*/
+    align-items: center; 
+    height: 100vh;/* Align vertically*/
+}
+.container_task_page{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px auto;
+    position: relative;
+    left: 150px;
+    width: 90%;
+    height:100%;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    display: block;
+    text-wrap:wrap;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.box{
+    width: 700px;
+    height: 50px;
+    left:250px;
+    display:flex;
+    background-color: white;
+    position: relative;
+}
+.box:nth-child(1){
+    top: 200px;
+}
+
+.inner_box{
+    width: 50px;
+    height: 90%;
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.949);
+}
+.inner_box:hover{
+    background-color: rgba(140, 255, 0, 0.513);
+}
+.inner_box:active, .active{
+    background-color: rgb(124, 213, 14);
+}
+
+.count {
+    display: block;
+    margin: 5px 10px;
+    font-size: 40px;
+    color: black;
+    font-family: 'VT323', monospace;
+}
+.count:nth-child(1){
+
+}
+
+
+/* Rebecca's styling */
+
+html.person {
+    background-image: url(background.jpg);
+}
+
+html.person table caption {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+html.person div.toDo tbody tr:hover {
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    color: rgba(254, 155, 155);
+    transition: background-color 0.5s linear;
+}
+
+html.person div.inProg tbody tr:hover {
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 246, 150);
+    transition: background-color 0.5s linear;
+}
+
+html.person div.done tbody tr:hover {
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    color: rgba(197, 252, 154);
+    transition: background-color 0.5s linear;
+}
+
+html.person div.toDo table {
+    border: solid 5px rgb(68, 0, 0);
+}
+
+html.person div.toDo th {
+    font-size: 16px;
+    background-color: rgb(125, 0, 0);
+    color: white;
+}
+
+html.person div.inProg table {
+    border: solid 5px rgb(80, 80, 0);
+}
+
+html.person div.inProg th {
+    font-size: 16px;
+    background-color: rgb(106, 92, 1);
+    color: white;
+}
+
+html.person div.done table {
+    border: solid 5px rgb(0, 87, 0);
+}
+
+html.person div.done th {
+    font-size: 16px;
+    background-color: rgb(0, 125, 0);
+    color: white;
+}
+
+html.person div.toDo td {
+    border: solid 1px rgb(68, 0, 0);
+}
+
+html.person div.inProg td {
+    border: solid 1px rgb(80, 80, 0);
+}
+
+html.person div.done td {
+    border: solid 1px rgb(0, 87, 0);
+}
+
+html.form {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 150px auto;
+    grid-template-areas: "menu1 body";
+}
+
+html.form body {
+    grid-area: body;
+    grid-column: 2;
+}
+
+legend {
+    color: rgb(245, 245, 245);
+    font-size: 24px;
+}
+
+#taskForm p {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+#personForm p {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+#taskJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+}
+
+#personJSONResult {
+    background-color: rgba(245, 245, 245, .85);
+    color: rgb(0, 0, 90);
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+}
+
+html.person .container {
+    min-height: 800px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-color: black;
+    border-width: thick;
+
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 150px auto auto auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas: "menu1 . title ."
+                         "menu1 toDo inProg done";
+}
+
+html.person .item {
+    min-height: 200px;
+    justify-self: stretch;
+}
+
+html.person p.title {
+    grid-area: title;
+    grid-row: 1;
+    grid-column: 3;
+    max-height: 50px;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+html.person div.toDo {
+    margin-left: 5px;
+    grid-area: toDo;
+    grid-row: 2;
+    grid-column: 2;
+    background-color: rgba(254, 155, 155, 0.85)
+}
+
+html.person div.inProg {
+    grid-area: inProg;
+    grid-row: 2;
+    grid-column: 3;
+    background-color: rgba(255, 246, 150, 0.85);
+}
+
+html.person div.done {
+    margin-right: 5px;
+    grid-area: done;
+    grid-row: 2;
+    grid-column: 4;
+    background-color: rgba(197, 252, 154, 0.85);
+}
+
+html.person .menu1 {
+    background-color: #12151C;
+    border-color: rgb(248,244,163);
+    border-style:outset;
+    border-width: 3px;
+    grid-area: menu1;
+    grid-column: 1;
+}
+
+.menu_button{
+    display:block;
+    height: 40px;
+    width: 40px;
+    position:absolute;
+    top:0px;
+    left:150px;
+    background-image: url(menu_button.png);
+    background-color: #12151C;
+}
+.menu_content{
+    font-size: 27px;
+    color: white;
+    font-family: 'VT323', monospace;
+    list-style-type: none;
+}
+#account_name{
+    display: block;
+    margin:-25px 0px 30px;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}
+.link{
+    display: block;
+    height: 40px;
+    margin: 10px 0px 10px -20px;
+    text-decoration: none;
+    color: white;
+}
+#sub_link{
+    display: block;
+    height: 30px;
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}
+#settings{
+    position: absolute;
+    bottom: 15px;
+    margin-left: -30px;
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+}
