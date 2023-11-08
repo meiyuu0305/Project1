@@ -276,7 +276,7 @@ input[type=text], select {
     box-sizing: border-box;
   }
 .box{
-    width: 670px;
+    width: 700px;
     height: 50px;
     left:250px;
     display:flex;
@@ -302,6 +302,16 @@ input[type=text], select {
     background-color: rgb(124, 213, 14);
 }
 
+.count {
+    display: block;
+    margin: 5px 10px;
+    font-size: 40px;
+    color: black;
+    font-family: 'VT323', monospace;
+}
+.count:nth-child(1){
+
+}
 
 
 
