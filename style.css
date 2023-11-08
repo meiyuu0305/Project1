@@ -734,15 +734,17 @@ legend {
     font-size: 24px;
 }
 
-#taskJSONResult {
+#taskForm p {
     background-color: rgba(245, 245, 245, .85);
     color: rgb(0, 0, 90);
     font-family: 'VT323', monospace;
+    font-size: 20px;
 }
 
-#personJSONResult {
+#personForm p {
     background-color: rgba(245, 245, 245, .85);
     color: rgb(0, 0, 90);
     font-family: 'VT323', monospace;
+    font-size: 20px;
 }
 /*END*/
