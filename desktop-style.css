@@ -435,52 +435,55 @@ legend {
     font-size: 24px;
 }
 
-html.person div.container {
+html.person .container {
+    min-height: 800px;
     background-color: rgba(255, 255, 255, 0.5);
     border-style: solid;
     border-color: black;
-    border-width: thin;
+    border-width: thick;
 
     display: grid;
-    justify-items: center;
     gap: 5px;
-    grid-template-columns: 500px auto 500px;
-    grid-template-areas: "menu1" 
-                         "title"
-                         "toDo"
-                         "inProg"
-                         "done";
+    grid-template-columns: 150px auto auto auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas: "menu1 . title ."
+                         "menu1 toDo inProg done";
 }
 
 html.person .item {
-    min-height: 100px;
+    min-height: 200px;
     justify-self: stretch;
-    margin: 0px 5px;
 }
 
 html.person p.title {
     grid-area: title;
-    grid-row: 2;
-    grid-column: 1;
+    grid-row: 1;
+    grid-column: 3;
+    max-height: 50px;
+
+    font-size: 25px;
+    font-weight: bold;
 }
 html.person div.toDo {
+    margin-left: 5px;
     grid-area: toDo;
-    grid-row: 3;
-    grid-column: 1;
+    grid-row: 2;
+    grid-column: 2;
     background-color: rgba(254, 155, 155, 0.85)
 }
 
 html.person div.inProg {
     grid-area: inProg;
-    grid-row: 4;
-    grid-column: 1;
+    grid-row: 2;
+    grid-column: 3;
     background-color: rgba(255, 246, 150, 0.85);
 }
 
 html.person div.done {
+    margin-right: 5px;
     grid-area: done;
-    grid-row: 5;
-    grid-column: 1;
+    grid-row: 2;
+    grid-column: 4;
     background-color: rgba(197, 252, 154, 0.85);
 }
 
@@ -490,8 +493,7 @@ html.person .menu1 {
     border-style:outset;
     border-width: 3px;
     grid-area: menu1;
-    grid-row: 1;
-    display: grid;
+    grid-column: 1;
 }
 
 .menu_button{
