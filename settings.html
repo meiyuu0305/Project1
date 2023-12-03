@@ -5,13 +5,14 @@
     <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 768px)" href="tablet-style.css">
     <link rel="stylesheet" media="screen and (min-width: 769px)" href="desktop-style.css">
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Team Management</title>
+    <title>Settings</title>
 </head>
-<body style="display: flex;">
+<body>
     <div class = "menu1">
         <ul class = "menu_content"> 
             <li><a id="account_name" class="link" href="team.html"> Team Java </a></li> <!-- Task: Add links -->
@@ -30,53 +31,24 @@
             <li><a id="settings" href="settings.html"> Settings </a></li>
         </ul>
     </div> 
-    
-    <div class = "container_task_page" > 
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Person 1</p>
-            <input type="text" name="person1" placeholder="Your task..">
+    <div class = "container_task_page" style = "height: 200px; " > 
+        <form class ="settings_layout">
+            <label for="username">Username</label>
+            <input type="text" id="input" placeholder="Your username.."> <br><br>
         </form>
     </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Person 2</p>
-            <input type="text" name="person2" placeholder="Your task..">
+    <div class = "container_task_page" style = "height: 200px; " > 
+        <form class ="settings_layout">
+            <label for="DOB">Date of Birth</label>
+            <input type="date" id="input"  style = "height: 30px; width:200px"><br><br>
         </form>
     </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Person 3</p>
-            <input type="text" name="person3" placeholder="Your task..">
+    <div class = "container_task_page" style = "height: 200px; " > 
+        <form class ="settings_layout">
+            <label for="sex">Gender</label>
+            <input type="checkbox"  style = "height: 30px; width:200px"><label for="sex">Female</label>
+            <input type="checkbox"  style = "height: 30px; width:200px"><label for="sex">Male</label><br><br>
         </form>
     </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Person 4</p>
-            <input type="text" name="person4" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Person 5</p>
-            <input type="text" name="person5" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Person 6</p>
-            <input type="text" name="person6" placeholder="Your task..">
-        </form>
-    </div>
-    <div class = "task_widget">
-        <form>
-            <p class = "heading">Person 7</p>
-            <input type="text" name="person7" placeholder="Your task..">
-        </form>
-    </div>
-    
-    </div>
-    </div>
-    
 </body>
 </html>
