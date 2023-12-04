@@ -344,9 +344,57 @@ input[type=text], select {
     border-radius: 20px;
 
 }
-
-
-
+.store {
+    position: absolute;
+    bottom:50px;
+    right:50px;
+    display:box;
+    background-color: goldenrod;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 20px 10px 5px rgba(129, 108, 54, 0.842);
+    width:200px;
+    height: 50px;
+    font-size: 40px;
+    font-family: 'VT323', monospace;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.store:hover {
+    animation: color-change 0.5s linear;
+    animation-fill-mode:both;
+}
+@keyframes color-change {
+    25%{
+        color: rgb(168, 166, 166);
+        box-shadow: 18px 8px 3px rgba(129, 108, 54, 0.842);
+    }
+    50%{
+        color: grey;
+    }
+    75%{
+        color: rgb(86, 86, 86);
+        box-shadow: 15px 5px 3px rgba(129, 108, 54, 0.842);
+    }
+    100%{
+        color: black;
+        box-shadow: 12px 5px 3px rgba(129, 108, 54, 0.842);
+    }
+}
+.back{
+    display:block;
+    background-image: url("arrow.png");
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    bottom: 20px;
+    left: 30px;
+}
+.store-head{
+    font-family: 'Teko', sans-serif;
+    font-size: 120px;
+    color: white;
+}
 /* Rebecca's styling */
 
 html.person {
