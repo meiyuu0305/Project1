@@ -36,7 +36,24 @@
                     <li><a id="settings" href="settings.html"> Settings </a></li>
                 </ul>
             </div>
-        <form id="personForm" method="post">
+        <?php
+        //define variables to match inputs
+        $first_name = $last_name = "";
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $first_name = test_input($_POST["firstname"]);
+            $last_name = test_input($_POST["lastname"]);
+        }
+        ?>
+        <form id="personForm" method="POST"
+                action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <fieldset>
                 <legend>Add New Team Member</legend>
                 <p>
