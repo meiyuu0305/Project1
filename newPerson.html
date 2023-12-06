@@ -36,16 +36,49 @@
                     <li><a id="settings" href="settings.html"> Settings </a></li>
                 </ul>
             </div>
-        <form id="personForm" method="post">
+        <?php
+        //define variables to match inputs
+        $first_name = $last_name = "";
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
+        //define variables for error messages
+        $fnameErr = $lnameErr = "";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["firstname"])) {
+                $fnameErr = "First name is required";
+            }
+            else {
+                $first_name = test_input($_POST["firstname"]);
+            }
+            if (empty($_POST["lastname"])) {
+                $lnameErr = "Last name is required";
+            }
+            else {
+                $last_name = test_input($_POST["lastname"]);
+            }
+        }
+
+        ?>
+
+        <form id="personForm" method="POST"
+                action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <fieldset>
                 <legend>Add New Team Member</legend>
                 <p>
                     <label for="f-firstname">First Name: </label>
                     <input type="text" name="firstname" placeholder="First" id="f-firstname" />
+                    <span class="error">* <?php echo fnameErr;?></span>
                 </p>
                 <p>
                     <label for="f-lastname">Last Name: </label>
                     <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
+                    <span class="error">* <?php echo lnameErr;?></span>
                 </p>
                 <input type="reset" />
                 <input type="submit" />
@@ -55,5 +88,7 @@
 
         <script src="newPerson.js">
         </script>
+
+        
     </body>
 </html>
