@@ -14,8 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
     <title>Galaxy Store</title>
 </head>
-<body>
+<body style="background-image: none;">
     <div class = "store-head center" > Galaxy Store</div>
-    <div class ="back"> </div>
+    <script> function reveal(){
+        var reveals = document.querySelectorAll(".reveal")
+        for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if(elementTop < windowHeight - elementVisible){reveals[i].classList.add("active");}
+        else{reveals[i].classList.remove("active");}
+        }
+}
+window.addEventListener("scroll", reveal);</script>
 </body>
 </html>

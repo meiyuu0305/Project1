@@ -357,7 +357,7 @@ input[type=text], select {
     height: 50px;
     font-size: 40px;
     font-family: 'VT323', monospace;
-    color: whitesmoke;
+    color: white;
     text-decoration: none;
 }
 .store:hover {
@@ -381,19 +381,21 @@ input[type=text], select {
         box-shadow: 12px 5px 3px rgba(129, 108, 54, 0.842);
     }
 }
-.back{
-    display:block;
-    background-image: url("arrow.png");
-    width: 100px;
-    height: 100px;
-    position:absolute;
-    bottom: 20px;
-    left: 30px;
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
 }
+.real.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .store-head{
     font-family: 'Teko', sans-serif;
     font-size: 120px;
-    color: white;
+    color: black;
 }
 /* Rebecca's styling */
 
