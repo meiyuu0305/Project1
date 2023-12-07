@@ -1,4 +1,40 @@
 <!-- file for form to add new person to team -->
+<?php
+        //define variables to match inputs
+        $first_name = $last_name = "";
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
+        //define variables for error messages
+        $fnameErr = $lnameErr = "";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["firstname"])) {
+                $fnameErr = "First name is required";
+            }
+            else {
+                $first_name = test_input($_POST["firstname"]);
+                if(!preg_match("/^[a-zA-Z- ]*$/", $first_name)) {
+                    $fnameErr = "Only letters and white space allowed";
+                }
+            }
+            if (empty($_POST["lastname"])) {
+                $lnameErr = "Last name is required";
+            }
+            else {
+                $last_name = test_input($_POST["lastname"]);
+                if(!preg_match("/^[a-zA-Z- ]*$/", $first_name)) {
+                    $fnameErr = "Only letters and white space allowed";
+                }
+            }
+        }
+
+        ?>
+
 
 <!DOCTYPE html>
 
@@ -36,35 +72,7 @@
                     <li><a id="settings" href="settings.html"> Settings </a></li>
                 </ul>
             </div>
-        <?php
-        //define variables to match inputs
-        $first_name = $last_name = "";
-
-        function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-
-        //define variables for error messages
-        $fnameErr = $lnameErr = "";
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (empty($_POST["firstname"])) {
-                $fnameErr = "First name is required";
-            }
-            else {
-                $first_name = test_input($_POST["firstname"]);
-            }
-            if (empty($_POST["lastname"])) {
-                $lnameErr = "Last name is required";
-            }
-            else {
-                $last_name = test_input($_POST["lastname"]);
-            }
-        }
-
-        ?>
+        
 
         <form id="personForm" method="POST"
                 action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
