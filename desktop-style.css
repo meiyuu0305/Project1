@@ -482,7 +482,7 @@ html.form body {
 }
 
 div span.error {
-    color: rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245);
 }
 
 legend {

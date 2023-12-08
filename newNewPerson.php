@@ -27,7 +27,6 @@
                 $lastnameErr = "";
             }
         }
-        echo "$firstname <br> $lastname <br> $firstnameErr <br> $lastnameErr";
     }
 
     function test_input($data) {
