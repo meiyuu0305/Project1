@@ -1,4 +1,14 @@
+<?php
+    $firstname = $lastname = "";
 
+    
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+    }
+?>
 
 <!DOCTYPE html>
 <html>
