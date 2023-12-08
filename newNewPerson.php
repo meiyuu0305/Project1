@@ -21,7 +21,8 @@
                     <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
                 </div>
                 <div>
-                <input type="submit" value="Submit"/>
+                    <input type="reset" value="Reset" />
+                    <input type="submit" value="Submit"/>
                 </div>
             </fieldset>
         </form>
