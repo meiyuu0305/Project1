@@ -30,9 +30,6 @@
 <html>
 <body>
     <h1>newPerson form plus form validation from PHP</h1>
-    <p>Check what $_SERVER["PHP_SELF"] returns<p>
-
-    <?php echo $_SERVER["PHP_SELF"];?>
 
     <form id="personForm" method="POST"
                 action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
@@ -41,11 +38,12 @@
                 <div>
                     <label for="f-firstname">First Name: </label>
                     <input type="text" name="firstname" placeholder="First" id="f-firstname" />
-                    <span>* <?php echo $fnameErr; ?></span>
+                    <span>* <?php echo $firstnameErr; ?></span>
                 </div>
                 <div>
                     <label for="f-lastname">Last Name: </label>
                     <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
+                    <span>* <?php echo $lastnameErr; ?></span>
                 </div>
                 <div>
                     <input type="reset" value="Reset" />
