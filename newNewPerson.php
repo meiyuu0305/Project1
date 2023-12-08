@@ -12,6 +12,7 @@
             }
             else {
                 $firstname = test_input($_POST["firstname"]);
+                $firstnameErr = "";
             }
         }
         if (empty(test_input($_POST["lastname"]))) {
@@ -23,6 +24,7 @@
             }
             else {
                 $lastname = test_input($_POST["lastname"]);
+                $lastnameErr = "";
             }
         }
     }
