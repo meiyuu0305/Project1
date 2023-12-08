@@ -75,7 +75,6 @@
                     <li><a id="settings" href="settings.html"> Settings </a></li>
                 </ul>
             </div>
-        </div>
 
         <form id="personForm" method="POST"
                 action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
@@ -101,5 +100,6 @@
 
         <script src="newPerson.js">
         </script>
+    </div>
 </body>
 </html>
