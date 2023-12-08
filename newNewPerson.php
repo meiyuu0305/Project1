@@ -16,9 +16,10 @@
                     <label for="f-firstname">First Name: </label>
                     <input type="text" name="firstname" placeholder="First" id="f-firstname" />
                     <span class="error">* <?php echo fnameErr;?></span>
-            </div>
-                
-                <input type="submit" />
+                </div>
+                <div>
+                <input type="submit" value="Submit"/>
+                </div>
             </fieldset>
         </form>
         <p id="personJSONResult">Team Member Info</p>
