@@ -17,6 +17,10 @@
                     <input type="text" name="firstname" placeholder="First" id="f-firstname" />
                 </div>
                 <div>
+                    <label for="f-lastname">Last Name: </label>
+                    <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
+                </div>
+                <div>
                 <input type="submit" value="Submit"/>
                 </div>
             </fieldset>
