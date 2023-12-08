@@ -7,15 +7,24 @@
             $firstnameErr = "First name is required.";
         }
         else {
-            $firstname = test_input($_POST["firstname"]);
+            if(!preg_match('/^[a-zA-Z]+$/', test_input($_POST["username"]))) {
+                $firstnameErr = "Names can only contain letters.";
+            }
+            else {
+                $firstname = test_input($_POST["firstname"]);
+            }
         }
         if (empty(test_input($_POST["lastname"]))) {
             $lastnameErr = "Last name is required.";
         }
         else {
-            $lastname = test_input($_POST["lastname"]);
+            if(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))) {
+                $lastnameErr = "Names can only contain letters.";
+            }
+            else {
+                $lastname = test_input($_POST["lastname"]);
+            }
         }
-        echo "$firstname <br> $lastname";
     }
 
     function test_input($data) {
