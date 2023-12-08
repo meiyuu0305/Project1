@@ -12,11 +12,11 @@
                 action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
             <fieldset>
                 <legend>Add New Team Member</legend>
-                <p>
+                <div>
                     <label for="f-firstname">First Name: </label>
                     <input type="text" name="firstname" placeholder="First" id="f-firstname" />
                     <span class="error">* <?php echo fnameErr;?></span>
-                </p>
+            </div>
                 
                 <input type="submit" />
             </fieldset>
