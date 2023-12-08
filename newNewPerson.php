@@ -7,7 +7,7 @@
             $firstnameErr = "First name is required.";
         }
         else {
-            if(!preg_match('/^[a-zA-Z]+$/', test_input($_POST["username"]))) {
+            if(preg_match('/^[a-zA-Z]+$/', test_input($_POST["username"]))) {
                 $firstnameErr = "Names can only contain letters.";
             }
             else {
