@@ -481,7 +481,7 @@ html.form body {
     grid-column: 2;
 }
 
-div span.error {
+div.span_wrapper {
     background-color: rgb(245, 245, 245);
 }
 

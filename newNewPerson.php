@@ -81,7 +81,9 @@
                 <div>
                     <label for="f-firstname">First Name: </label>
                     <input type="text" name="firstname" placeholder="First" id="f-firstname" />
-                    <span class="error">* <?php echo $firstnameErr; ?></span>
+                    <div class="span_wrapper">
+                        <span class="error">* <?php echo $firstnameErr; ?></span>
+                    </div>
                 </div>
                 <div>
                     <label for="f-lastname">Last Name: </label>
