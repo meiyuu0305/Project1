@@ -39,7 +39,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html class="form">
 
     <head>
         <link rel="stylesheet" media='screen and (max-width: 480px)' href="mobile-style.css">
