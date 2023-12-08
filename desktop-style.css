@@ -481,6 +481,10 @@ html.form body {
     grid-column: 2;
 }
 
+span.error {
+    color: rgb(245, 245, 245);
+}
+
 legend {
     color: rgb(245, 245, 245);
     font-size: 24px;

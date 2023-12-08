@@ -82,12 +82,12 @@
                 <div>
                     <label for="f-firstname">First Name: </label>
                     <input type="text" name="firstname" placeholder="First" id="f-firstname" />
-                    <span>* <?php echo $firstnameErr; ?></span>
+                    <span class="error">* <?php echo $firstnameErr; ?></span>
                 </div>
                 <div>
                     <label for="f-lastname">Last Name: </label>
                     <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
-                    <span>* <?php echo $lastnameErr; ?></span>
+                    <span class="error">* <?php echo $lastnameErr; ?></span>
                 </div>
                 <div>
                     <input type="reset" value="Reset" />
