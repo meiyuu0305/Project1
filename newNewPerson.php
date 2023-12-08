@@ -19,7 +19,7 @@
             $lastnameErr = "Last name is required.";
         }
         else {
-            if(preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))) {
+            if(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))) {
                 $lastnameErr = "Names can only contain letters.";
             }
             else {
