@@ -1,15 +1,20 @@
 <?php
     $firstname = $lastname = "";
-    $fnameErr = $lnameErr = "";
+    $firstnameErr = $lastnameErr = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["firstname"])) {
-            $fnameErr = "First name is required.";
+            $firstnameErr = "First name is required.";
         }
         else {
             $firstname = test_input($_POST["firstname"]);
         }
-        $lastname = test_input($_POST["lastname"]);
+        if (empty($_POST["lastname"])) {
+            $lastnameErr = "Last name is required.";
+        }
+        else {
+            $lastname = test_input($_POST["lastname"]);
+        }
         echo "$firstname <br> $lastname";
     }
 
