@@ -74,7 +74,7 @@
             </div>
         
 
-        <form id="personForm" method="POST"
+        <form method="POST"
                 action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
             <fieldset>
                 <legend>Add New Team Member</legend>

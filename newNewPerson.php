@@ -23,7 +23,7 @@
 
     <?php echo $_SERVER["PHP_SELF"];?>
 
-    <form method="POST"
+    <form id="personForm" method="POST"
                 action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
             <fieldset>
                 <legend>Add New Team Member</legend>
