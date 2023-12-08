@@ -40,7 +40,6 @@
 
 <!DOCTYPE html>
 <html>
-    <h1>newPerson form plus form validation from PHP</h1>
 
     <head>
         <link rel="stylesheet" media='screen and (max-width: 480px)' href="mobile-style.css">
@@ -100,6 +99,5 @@
 
         <script src="newPerson.js">
         </script>
-    </div>
 </body>
 </html>
