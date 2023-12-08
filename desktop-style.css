@@ -397,11 +397,33 @@ input[type=text], select {
     transform: translateY(0%);
     transition: 1s ease-out;
 }
+.store-background{
+    height: 500px;
+    background-image:url(backgroound-store.jpeg); 
+    background-size:100% auto;
+}
+.store-background::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height:510px;
+    background-color: rgba(0,0,0,0.25);
+}
 
 .store-head{
     font-family: 'Teko', sans-serif;
     font-size: 120px;
     color: black;
+}
+#highlight{
+    display: inline-block;
+    position: absolute;
+    background-color: #F2BB05;
+    height:120px;
+    width:400px;
 }
 /* Rebecca's styling */
 
