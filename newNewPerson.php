@@ -1,12 +1,17 @@
 <?php
     $firstname = $lastname = "";
 
-    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $firstname = test_input($_POST["firstname"]);
+        $lastname = test_input($_POST["lastname"]);
+        echo "$firstname <br> $lastname";
+    }
 
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
+        return $data;
     }
 ?>
 
