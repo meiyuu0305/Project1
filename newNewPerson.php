@@ -5,6 +5,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["firstname"])) {
             $fnameErr = "First name is required.";
+            echo $fnameErr;
         }
         else {
             $firstname = test_input($_POST["firstname"]);
