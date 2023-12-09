@@ -64,20 +64,23 @@
         <form id="taskForm" method="post">
             <fieldset>
                 <legend>Add New Task:</legend>
-                <p>
+                <div>
                     <label for="f-task">Task: </label>
                     <input type="text" name="task" id="f-task" placeholder="Enter task name here..."/>
-                </p>
-                <p>
+                    <span class="error">* <?php echo $taskErr; ?></span>
+                </div>
+                <div>
                     <label for="f-dueDate">Due Date: </label>
                     <input type="date" name="duedate" id="f-dueDate"/>
-                </p>
-                <p>
+                </div>
+                <div>
                     <label for="f-teamMember">Assigned Team Member: </label>
                     <input type="text" name="assignedMember" id="f-teamMember" placeholder="First and last name"/>
-                </p>
-                <input type="reset" />
-                <input type="submit" />
+                </div>
+                <div>
+                    <input type="reset" />
+                    <input type="submit" />
+                </div>
             </fieldset>
         </form>
         <p id="taskJSONResult">Task Information</p>
