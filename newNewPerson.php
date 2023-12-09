@@ -1,4 +1,3 @@
-<!-- file for form to add new person to team -->
 <?php
     $firstname = $lastname = "";
     $firstnameErr = $lastnameErr = "";
@@ -28,7 +27,6 @@
                 $lastnameErr = "";
             }
         }
-        echo "$firstname <br> $lastname <br> $firstnameErr <br> $lastnameErr";
     }
 
     function test_input($data) {
@@ -39,10 +37,9 @@
     }
 ?>
 
-
 <!DOCTYPE html>
-
 <html class="form">
+
     <head>
         <link rel="stylesheet" media='screen and (max-width: 480px)' href="mobile-style.css">
         <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 768px)" href="tablet-style.css">
@@ -70,39 +67,36 @@
                     <li><a class="link" href="person4.html"> Person 4 </a></li>
                     <li><a class="link" href="person5.html"> Person 5 </a></li>
                     <li><a class="link" href="person6.html"> Person 6 </a></li>
-                    <li><a class="link" href="newPerson.html">Add New Team Member</a></li>
-                    <li><a class="link" href="newTask.html">Add New Task</a></li>
+                    <li><a class="link" href="newNewPerson.php">Add New Team Member</a></li>
+                    <li><a class="link" href="newNewTask.php">Add New Task</a></li>
                     <li><a class="link" href="progress_page.html"> Progress </a></li>
                     <li><a id="settings" href="settings.html"> Settings </a></li>
                 </ul>
             </div>
-        
 
-            <form id="personForm" method="POST"
-            action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
-        <fieldset>
-            <legend>Add New Team Member</legend>
-            <div>
-                <label for="f-firstname">First Name: </label>
-                <input type="text" name="firstname" placeholder="First" id="f-firstname" />
-                <span>* <?php echo $firstnameErr; ?></span>
-            </div>
-            <div>
-                <label for="f-lastname">Last Name: </label>
-                <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
-                <span>* <?php echo $lastnameErr; ?></span>
-            </div>
-            <div>
-                <input type="reset" value="Reset" />
-                <input type="submit" value="Submit"/>
-            </div>
-        </fieldset>
-    </form>
-    <p id="personJSONResult">Team Member Info</p>
+        <form id="personForm" method="POST"
+                action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+            <fieldset>
+                <legend>Add New Team Member</legend>
+                <div>
+                    <label for="f-firstname">First Name: </label>
+                    <input type="text" name="firstname" placeholder="First" id="f-firstname" />
+                    <span class="error">* <?php echo $firstnameErr; ?></span>
+                </div>
+                <div>
+                    <label for="f-lastname">Last Name: </label>
+                    <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
+                    <span class="error">* <?php echo $lastnameErr; ?></span>
+                </div>
+                <div>
+                    <input type="reset" value="Reset" />
+                    <input type="submit" value="Submit"/>
+                </div>
+            </fieldset>
+        </form>
+        <p id="personJSONResult">Team Member Info</p>
 
-    <script src="newPerson.js">
-    </script>
-
-        
-    </body>
+        <script src="newPerson.js">
+        </script>
+</body>
 </html>
