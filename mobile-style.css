@@ -433,6 +433,15 @@ html.form body {
     grid-column: 2;
 }
 
+html.form div label {
+    color: rgb(245, 245, 245);
+}
+
+div span.error {
+    color: rgb(245, 245, 245);
+    background-color: red;
+}
+
 legend {
     color: rgb(245, 245, 245);
     font-size: 24px;
