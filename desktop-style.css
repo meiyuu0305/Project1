@@ -412,6 +412,19 @@ input[type=text], select {
     height:510px;
     background-color: rgba(0,0,0,0.25);
 }
+.store-scroll-menu{
+    top:0px;
+    background-color: beige;
+    overflow: auto;
+    white-space: nowrap;
+}
+.store-scroll-menu a{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+}
 
 .store-head{
     font-family: 'Teko', sans-serif;
