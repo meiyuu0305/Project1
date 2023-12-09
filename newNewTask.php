@@ -8,11 +8,11 @@
             $taskErr = "Task description is required.";
         }
         else {
-            if(!preg_match('/^[a-zA-Z0-9]+$/', test_input($_POST["task"]))) {
+            if (!preg_match('/^[a-zA-Z0-9]+$/', test_input(trim($_POST["task"])))) {
                 $taskErr = "Task description should only contain letters and numbers.";
             }
             else {
-                $task = htmlspecialchars(stripslashes($task));
+                $task = test_input($task);
                 $taskErr = "";
             }
         }
@@ -28,12 +28,22 @@
                 $dueDateErr = "";
             }
         }
-        //if (empty($_POST["assignedMember"]))
+        if (empty($_POST["assignedMember"]) || empty(trim($_POST["assignedMember"]))) {
+            $assignedMemberErr = "A team member must be assigned to the task.";
+        }
+        else {
+            if (!preg_match('/^[a-zA-Z]+$/', test_input(trim($_POST["task"])))) {
+                $assignedMemberErr = "Team member name should only contain letters.";
+            }
+            else {
+                $assignedMember = test_input($_POST["assignedMember"]);
+                $assignedMemberErr = "";
+            }
+        }
     }
 
 
     function test_input($data) {
-        $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
@@ -46,3 +56,4 @@
     }
 
 ?>
+
