@@ -413,7 +413,6 @@ input[type=text], select {
     display: inline-block;
     position: absolute;
     font-family: 'Teko', sans-serif;
-    background-color: #a669f0;
     height: 50px;
     padding: 10px;
     font-size: 50px;
