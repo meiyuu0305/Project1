@@ -20,11 +20,10 @@
             $dueDateErr = "Due date is required.";
         }
         else {
-            if (!test_date($dueDate)) {
-                $dueDateErr = "Due date must be in format 'YYYY-MM-DD'.";
+            if (!preg_match('/^[0-9-]+$/', $dueDate)) {
+                $dueDateErr = "Due date must be only include numbers and hyphens.";
             }
             else {
-                $dueDate = htmlspecialchars($dueDate);
                 $dueDateErr = "";
             }
         }
@@ -53,6 +52,8 @@
     function test_date($date, $format = "Y-m-d") {
         $d = DateTime::createFromFormat($format, $date);
         return $d && $d->format($format) === $date;
+
+
     }
 
 ?>
