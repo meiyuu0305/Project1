@@ -89,7 +89,7 @@
                     <li><a class="link" href="person5.html"> Person 5 </a></li>
                     <li><a class="link" href="person6.html"> Person 6 </a></li>
                     <li><a class="link" href="newNewPerson.php">Add New Team Member</a></li>
-                    <li><a class="link" href="newTask.html">Add New Task</a></li>
+                    <li><a class="link" href="newNewTask.php">Add New Task</a></li>
                     <li><a class="link" href="progress_page.html"> Progress </a></li>
                     <li><a id="settings" href="settings.html"> Settings </a></li>
                 </ul>
