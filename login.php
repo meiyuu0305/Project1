@@ -73,5 +73,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
+<!DOCTYPE html>
 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+    </head>
+
+    <body>
+        <h2>Login</h2>
+        <p>Please fill in your credentials to login.</p>
+
+        <?php if(!empty($login_err)) {
+            echo '<div class="error">' . $login_err . '</div>';
+        } ?>
+        <form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">
+            <div>
+                <label>Username:</label>
+                <input type="text" name="user" value="<?php echo $user; ?>">
+                <span class="error">* <?php echo $user_err; ?></span>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="pass" value="<?php echo $pass; ?>">
+                <span class="error">* <?php echo $pass_err; ?></span>
+            </div>
+            <div>
+                <input type="submit" value="Login">
+                <input type="reset" value="Reset">
+                <p>Don't have an account?
+                    <a href="register.php"><button>Sign Up</button></a>
+                </p>
+            </div>
+        </form>
+    </body>
+</html>
 
