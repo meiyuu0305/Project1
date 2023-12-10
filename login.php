@@ -5,7 +5,7 @@ session_start();
 
 //check if the user is already loggen in, if yes then redirect him to welcome page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: frontpage.html");
+    header("location: frontpage.php");
     exit;
 }
 
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $login_err = "";
 
                             //redirect user to front page
-                            header("location: frontpage.html");
+                            header("location: frontpage.php");
                         }
                         else {
                             //password not valid, display login error
@@ -139,40 +139,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 
 
-<!--DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-    </head>
-
-    <body>
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
-
-        <?php if(!empty($login_err)) {
-            echo '<div class="error">' . $login_err . '</div>';
-        } ?>
-        <form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">
-            <div>
-                <label>Username:</label>
-                <input type="text" name="user" value="<?php echo $user; ?>">
-                <span class="error">* <?php echo $user_err; ?></span>
-            </div>
-            <div>
-                <label>Password:</label>
-                <input type="password" name="pass" value="<?php echo $pass; ?>">
-                <span class="error">* <?php echo $pass_err; ?></span>
-            </div>
-            <div>
-                <input type="submit" value="Login">
-                <input type="reset" value="Reset">
-                <p>Don't have an account?
-                    <a href="register.php"><button>Sign Up</button></a>
-                </p>
-            </div>
-        </form>
-    </body>
-</html-->
 
