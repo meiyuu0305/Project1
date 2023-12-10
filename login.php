@@ -109,8 +109,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
         <fieldset>
-            <legend>Sign Up</legend>
-            <p>Please fill out this form to create an account.</p>
+            <legend>Log In</legend>
+            <p>Use your username and password to log in.</p>
             <div>
                 <label>Username:</label>
                 <input type="text" name="username" value="<?php echo $username; ?>">
