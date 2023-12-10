@@ -1,5 +1,3 @@
-<!-- first person file -->
-
 <?php
     //initialize session
     session_start();
@@ -9,6 +7,7 @@
         exit;
     }
 ?>
+
 
 
 
@@ -24,14 +23,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-        <title>Person 1</title>
+        <title>Person 6</title>
     </head>
     <body>
         <div class="container">
-            <p class="title">Person 1's Tasks</p>
+            <p class="title">Person 6's Tasks</p>
             <div class = "menu1">
                 <ul class = "menu_content"> 
-                    <li><a id="account_name" class="link" href="team.php"> Team Java </a></li> <!-- Task: Add links -->
+                    <li><a id="account_name" class="link" href="team.php"> User </a></li> <!-- Task: Add links -->
                     <li><a class= link href="frontpage.php">Front Page</a></li>
                     <li><a class="link" href="person1.php"> Person 1 </a></li>
                     <li><a id="sub_link"> Sub links </a></li>
@@ -48,7 +47,7 @@
                     <li><a id="settings" href="settings.html"> Settings </a></li>
                     <li><a class="link" href="logout.php">Log Out </a><li></li>
                 </ul>
-            </div>
+                </div> 
             <div class="toDo item">
                 <table>
                     <caption>TO DO:</caption>
@@ -61,14 +60,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>CS 315 project</td>
-                            <td>newPerson html file</td>
-                            <td>11/03/2023</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>CS 315 project</td>
-                            <td>newTask html file</td>
-                            <td>11/05/2023</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -85,9 +84,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>CS 315 project</td>
-                            <td>person html file styling</td>
-                            <td>11/03/2023</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -105,10 +104,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>CS 315 project</td>
-                            <td>person1 html file structure</td>
-                            <td>11/03/2023</td>
-                            <td>11/02/2023</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
