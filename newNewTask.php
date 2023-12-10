@@ -8,7 +8,7 @@
             $taskErr = "Task description is required.";
         }
         else {
-            if (!preg_match('/^[a-zA-Z0-9]+$/', test_input($_POST["task"]))) {
+            if (preg_match('/^[a-zA-Z0-9]+$/', test_input($_POST["task"]))) {
                 $taskErr = "Task description should only contain letters and numbers.";
             }
             else {
@@ -20,7 +20,7 @@
             $dueDateErr = "Due date is required.";
         }
         else {
-            if (!preg_match('/^[0-9-]+$/', $dueDate)) {
+            if (preg_match('/^[0-9-]+$/', $dueDate)) {
                 $dueDateErr = "Due date must only include numbers and hyphens.";
             }
             else {
@@ -31,7 +31,7 @@
             $assignedMemberErr = "A team member must be assigned to the task.";
         }
         else {
-            if (!preg_match('/^[a-zA-Z]+$/', test_input($_POST["task"]))) {
+            if (preg_match('/^[a-zA-Z]+$/', test_input($_POST["task"]))) {
                 $assignedMemberErr = "Team member name should only contain letters.";
             }
             else {
