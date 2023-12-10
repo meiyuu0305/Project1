@@ -20,12 +20,12 @@
             $dueDateErr = "Due date is required.";
         }
         else {
-            if (!preg_match('/^[0-9-]+$/', $dueDate)) {
+            /*if (!preg_match('/^[0-9-]+$/', $dueDate)) {
                 $dueDateErr = "Due date must only include numbers and hyphens.";
             }
-            else {
-                $dueDateErr = "";
-            }
+            else {*/
+            $dueDateErr = "";
+            //}
         }
         if (empty($_POST["assignedMember"]) || empty(trim($_POST["assignedMember"]))) {
             $assignedMemberErr = "A team member must be assigned to the task.";
