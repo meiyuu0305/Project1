@@ -101,7 +101,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2>Sign Up</h2>
         <p>Please fill out this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-
+        <div>
+                <label>Username:</label>
+                <input type="text" name="username" value="<?php echo $user; ?>">
+                <span class="error">* <?php echo $username_err; ?></span>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" value="<?php echo $pass; ?>">
+                <span class="error">* <?php echo $password_err; ?></span>
+            </div>
+            <div>
+                <label>Confirm Password:</label>
+                <input type="password" name="confirm_password" value="<?php echo $confirm_pass; ?>">
+                <span class="error">* <?php echo $confirm_password_err; ?></span>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                <a href="login.php"><button>Login here</button></a>
+            </div>
         </form>
     </body>
 </html>
