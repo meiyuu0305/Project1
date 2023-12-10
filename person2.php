@@ -23,21 +23,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-        <title>Person 6</title>
+        <title>Person 2</title>
     </head>
     <body>
         <div class="container">
-            <p class="title">Person 6's Tasks</p>
-            <div class = "menu1">
+            <p class="title">Person 2's Tasks</p>
+             <div class = "menu1">
                 <ul class = "menu_content"> 
                     <li><a id="account_name" class="link" href="team.html"> User </a></li> <!-- Task: Add links -->
-                    <li><a class= link href="frontpage.html">Front Page</a></li>
-                    <li><a class="link" href="person1.html"> Person 1 </a></li>
+                    <li><a class= link href="frontpage.php">Front Page</a></li>
+                    <li><a class="link" href="person1.php"> Person 1 </a></li>
                     <li><a id="sub_link"> Sub links </a></li>
                     <li><a id="sub_link"> Sub links </a></li>
                     <li><a id="sub_link"> Sub links </a></li>
-                    <li><a class="link" href="person2.html"> Person 2 </a></li>
-                    <li><a class="link" href="person3.html"> Person 3 </a></li>
+                    <li><a class="link" href="person2.php"> Person 2 </a></li>
+                    <li><a class="link" href="person3.php"> Person 3 </a></li>
                     <li><a class="link" href="person4.html"> Person 4 </a></li>
                     <li><a class="link" href="person5.html"> Person 5 </a></li>
                     <li><a class="link" href="person6.html"> Person 6 </a></li>
@@ -60,14 +60,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>Resident engagement</td>
+                            <td>talk to all new residents</td>
+                            <td>08/30/2023</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>CS 315 project</td>
+                            <td>newTask html file</td>
+                            <td>11/05/2023</td>
                         </tr>
                     </tbody>
                 </table>
@@ -84,9 +84,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>RA Training</td>
+                            <td>Turn in fall schedule</td>
+                            <td>08/15/2023</td>
                         </tr>
                     </tbody>
                 </table>
@@ -104,10 +104,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>Class Prep</td>
+                            <td>Purchase textbooks</td>
+                            <td>08/22/2023</td>
+                            <td>08/13/2023</td>
                         </tr>
                     </tbody>
                 </table>
