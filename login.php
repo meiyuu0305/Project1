@@ -5,7 +5,7 @@ session_start();
 
 //check if the user is already loggen in, if yes then redirect him to welcome page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: welcome.php");
+    header("location: frontpage.html");
     exit;
 }
 
@@ -113,12 +113,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Please fill out this form to create an account.</p>
             <div>
                 <label>Username:</label>
-                <input type="text" name="username" value="<?php echo $user; ?>">
+                <input type="text" name="username" value="<?php echo $username; ?>">
                 <span class="error">* <?php echo $username_err; ?></span>
             </div>
             <div>
                 <label>Password:</label>
-                <input type="password" name="password" value="<?php echo $pass; ?>">
+                <input type="password" name="password" value="<?php echo $password; ?>">
                 <span class="error">* <?php echo $password_err; ?></span>
             </div>
             <div>
