@@ -59,6 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
 
+                            //reset error messages
+                            $username_err = "";
+                            $password_err = "";
+                            $login_err = "";
+
                             //redirect user to front page
                             header("location: frontpage.html");
                         }
@@ -84,6 +89,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($pdo);
 }
 ?>
+
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+    </head>
+    <body>
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <p>Please fill out this form to create an account.</p>
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username" value="<?php echo $user; ?>">
+                <span class="error">* <?php echo $username_err; ?></span>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" value="<?php echo $pass; ?>">
+                <span class="error">* <?php echo $password_err; ?></span>
+            </div>
+            <div>
+                <?php
+                    if (!empty($login_err)) {
+                        echo '<span class="error">' . $login_err . '</div>';
+                    }
+                ?>
+            </div>
+            <div>
+                <input type="submit" value="Login">
+                <input type="reset" value="Reset">
+                <p>Don't have an account?</p> <a href="register.php"><button>Sign up now</button></a>
+            </div>
+        </fieldset>
+        </form>
+    </body>
+</html>
 
 
 <!--DOCTYPE html>
