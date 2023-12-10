@@ -12,74 +12,69 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 //include config file
 require_once "config.php";
 
+//define variables and initialize with empty values
+$username = $password = "";
+$username_err = $password_err = $login_err = "";
 
-
-?>
-
-/*<?php
-
-//initialize session
-session_start();
-
-//if user is logged in, send them to front page
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggenin"] === true) {
-    header(location: frontpage.html);
-    exit;
-}
-
-//include config
-require_once "config.php";
-
-//define variables and error messages
-$user = $pass = "";
-$user_err = $pass_err = $login_err = "";
-
+//processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //check if username is empty
-    if (empty(trim($_POST["user"]))) {
-        $user_err = "Please enter username.";
+    if (empty(trim($_POST["username"]))) {
+        $username_err = "Please enter username.";
     }
     else {
-        $user = trim($_POST["user"]);
+        $username = trim($_POST["username"]);
+        $username_err = "";
     }
     //check if password is empty
-    if (empty(trim($_POST["pass"]))) {
-        $pass_err = "Please enter password.";
+    if (empty(trim($_POST["password"]))) {
+        $password_err = "Please enter your password.";
     }
     else {
-        $pass = trim($_POST["pass"]);
+        $password = trim($_POST["password"]);
+        $password_err = "";
     }
-    //validate credentials using database table
-    if (empty($user_err) && empty($pass_err)) {
-        //prepare select statement
-        $sql = "SELECT user, pass FROM users WHERE user = :user";
+    //validate credentials
+    if (empty($username_err) && empty($password_err)) {
+        //prepare sql statement
+        $sql = "SELECT id, username, password FROM users WHERE username = :username";
         if ($stmt = $pdo->prepare($sql)) {
-            $stmt->bindParam(":user", $param_user, PDO::PARAM_STR);
-            $param_user = trim($_POST["user"]);
+            //bind variables to prepared statement
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            //set parameters
+            $param_username = trim($_POST["username"]);
+            //attempt to execute prepared statement
             if ($stmt->execute()) {
-                //check if username exists, if yes then verify password
+                //check if username exists, then verify password if so
                 if ($stmt->rowCount() == 1) {
                     if ($row = $stmt->fetch()) {
-                        $user = $row["user"];
-                        $hashed_pass = $row["pass"];
-                        if (password_verify($pass, $hashed_pass)) {
-                            //password correct, start session and send to front page
+                        $id = $row["id"];
+                        $username = $row["username"];
+                        $hashed_password = $row["password"];
+                        if (password_verify($password, $hashed_password)) {
+                            //password is correct, start new session
                             session_start();
-                            $_SESSION["loggenin"] = true;
-                            $_SESSION["username"] = $user;
+                            //store data in session variables
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["username"] = $username;
+
+                            //redirect user to front page
                             header("location: frontpage.html");
                         }
                         else {
+                            //password not valid, display login error
                             $login_err = "Invalid username or password.";
                         }
                     }
                 }
                 else {
+                    //username doesn't exist, display login error
                     $login_err = "Invalid username or password.";
                 }
             }
             else {
-                echo "Something went wrong. Please try again later.";
+                echo "Something went wrong. Please try again.";
             }
             //close statement
             unset($stmt);
@@ -88,8 +83,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //close connection
     unset($pdo);
 }
+?>
 
-?>*/
 
 <!--DOCTYPE html>
 
