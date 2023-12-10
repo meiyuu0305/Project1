@@ -94,7 +94,7 @@
                 </div>
             </fieldset>
         </form>
-        <p id="personJSONResult">Team Member Info</p>
+        <!-- id="personJSONResult">Team Member Info-->
 
         <script src="newPerson.js">
         </script>
