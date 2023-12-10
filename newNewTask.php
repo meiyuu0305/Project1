@@ -113,7 +113,7 @@
                 </div>
             </fieldset>
         </form>
-        <p id="taskJSONResult">Task Information</p>
+        <!-- id="taskJSONResult">Task Information-->
         <script src="newTask.js">
         </script>
     </body>
