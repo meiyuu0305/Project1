@@ -1,6 +1,6 @@
 <?php
 
-require_once = "config.php";
+require_once "config.php";
 
 $user = $pass = $confirm_pass = $firstname = $lastname = "";
 $user_err = $pass_err = $confirm_pass_err = $firstname_err = $lastname_err = "";
