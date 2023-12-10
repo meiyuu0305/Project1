@@ -9,8 +9,8 @@
     define('DB_NAME', 'time_management_proj');
 
     try {
-        $pdo = new PDO("mysql:host=" . DB_SERVER . ";port=" . DB_PORT . ";dbname=" . DN_NAME,
-                        DB_USERNAME, DB_PASSWORD);
+        $pdo = new PDO("mysql:host=localhost;port=3306;dbname=time_management_proj",
+                        "root", "root");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO:ERRMODE_EXCEPTION;)
         echo "Connected successfully";
     }
