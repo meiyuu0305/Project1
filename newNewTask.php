@@ -31,7 +31,7 @@
             $assignedMemberErr = "A team member must be assigned to the task.";
         }
         else {
-            if (preg_match('/^[a-zA-Z]+$/', test_input($_POST["task"]))) {
+            if (preg_match('/^[a-zA-Z]+$/', test_input($_POST["assignedMember"]))) {
                 $assignedMemberErr = "Team member name should only contain letters.";
             }
             else {
