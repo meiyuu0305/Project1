@@ -1,107 +1,82 @@
 <?php
 
 require_once "config.php";
+//define variables and initialize with empty values
+$username = $password = $confirm_password = "";
+$username_err = $password_err = $confirm_password_err = "";
 
-$user = $pass = $confirm_pass = $firstname = $lastname = "";
-$user_err = $pass_err = $confirm_pass_err = $firstname_err = $lastname_err = "";
-
+//process form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //validate username existence
-    if (empty(trim($_POST["user"]))) {
-        $user_err = "Please enter a username.";
+    //validate username
+    if (empty(trim($_POST["username"]))) {
+        $username_err = "Please enter a username.";
     }
-    //validate username characters
-    elseif (!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["user"]))) {
-        $user_err = "Username can only contain letters, numbers, and underscores.";
+    elseif (!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))) {
+        $username_err = "Username can only contain letters, numbers, and underscores.";
     }
-    //validate username uniqueness
     else {
-        $sql = "SELECT user FROM users WHERE user = :user";
+        //prepare a select statement
+        $sql = "SELECT id FROM users WHERE username = :username";
+        //attempt to execute select statement
         if ($stmt = $pdo->prepare($sql)) {
-            $stmt->bindParam(":user", $param_user, PDO::PARAM_STR);
-            $param_user = trim($_POST["user"]);
-
+            //bind variables to the prepared statement as parameters
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            //set parameters
+            $param_username = trim($_POST["username"]);
+            //attempt to execute prepared statement
             if ($stmt->execute()) {
-                if($stmt->rowCount() == 1) {
-                    $user_err = "This username is already taken.";
+                if ($stmt->rowCount() == 1) {
+                    $username_err = "This username is already taken.";
                 }
                 else {
-                    $user = trim($_POST["user"]);
-                    $user_err = "";
+                    $username = trim($_POST["username"]);
+                    $username_err = "";
                 }
             }
             else {
                 echo "Something went wrong. Please try again later.";
             }
+            //close statement
             unset($stmt);
         }
     }
     //validate password
-    if (empty(trim($_POST["pass"]))) {
-        $pass_err = "Please enter a password.";
+    if (empty(trim($_POST["password"]))) {
+        $password_err = "Please enter a password.";
     }
-    elseif (strlen(trim($_POST["pass"])) < 6) {
-        $pass_err = "Password must have at least 6 characters.";
+    elseif (strlen(trim($_POST["password"])) < 6) {
+        $password_err = "Password must have at least 6 characters.";
     }
     else {
-        $pass = trim($_POST["pass"]);
+        $password = trim($_POST["password"]);
+        $password_error = "";
     }
     //validate confirm password
-    if (empty(trim($_POST[$confirm_pass]))) {
-        $confirm_pass_err = "Please confirm password.";
+    if (empty(trim($_POST["confirm_password"]))) {
+        $confirm_password_err = "Please confirm password.";
+        $confirm_password_err = "";
     }
     else {
-        $confirm_pass = trim($_POST["confirm_pass"]);
-        if (empty($password_err) && ($pass != $confirm_pass)) {
-            $confirm_pass_err = "Password did not match.";
-        }
-        else {
-            $pass_err = "";
-            $confirm_pass_err = "";
+        $confirm_password = trim($_POST["confirm_password"]);
+        if (empty($password_err) && ($password != $confirm_password)) {
+            $confirm_password_err = "Password did not match.";
         }
     }
-    //validate first and last names
-    if (empty(test_input($_POST["firstname"])) || empty($_POST["firstname"])) {
-        $firstname_err = "First name is required.";
-    }
-    else {
-        if (!preg_match('/^[a-zA-Z]+$/', test_input($_POST["firstname"]))) {
-            $firstname_err = "Names can only contain letters.";
-        }
-        else {
-            $firstname = test_input($_POST["firstname"]);
-            $firstname_err = "";
-        }
-    }
-    if (empty(test_input($_POST["lastname"])) || empty($_POST["lastname"])) {
-        $lastname_err = "Last name is required.";
-    }
-    else {
-        if (!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["lastname"]))) {
-            $lastname_err = "Names can only contain letters.";
-        }
-        else {
-            $lastname = test_input($_POST["lastname"]);
-            $lastname_err = "";
-        }
-    }
-    if (empty($user_err) && empty($pass_err) && empty($confirm_pass_err) && empty($firstname_err) && empty($lastname_err)) {
-        //prepare insert statement
-        $sql = "INSERT INTO users (user, pass, firstname, lastname) VALUES
-                (:user, :pass, :firstname, :lastname)";
+    //check input errors before inserting in database
+    if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
+        $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
         if ($stmt = $pdo->prepare($sql)) {
-            $stmt->bindParam(":user", $param_user, PDO::PARAM_STR);
-            $stmt->bindParam(":pass", $param_pass, PDO::PARAM_STR);
-            $stmt->bindParam(":firstname", $param_firstname, PDO::PARAM_STR);
-            $stmt->bindParam(":lastname", $param_lastname, PDO::PARAM_STR);
+            //bind variables to the prepared statement as parameters
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
 
             //set parameters
-            $param_user = $user;
-            $param_pass = password_hash($pass, PASSWORD_DEFAULT);
-            $param_firstname = $firstname;
-            $param_lastname = $lastname;
-
+            $param_username = $username;
+            $param_password = password_hash($password, PASSWORD_DEFAULT); //hashes password
+            //attempt to execute prepared statement
             if ($stmt->execute()) {
+                //redirect to login page
+                echo "Sending you to login page...";
                 header("location: login.php");
             }
             else {
@@ -111,12 +86,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             unset($stmt);
         }
     }
+    //close connection
     unset($pdo);
 }
-
 ?>
 
 <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <h2>Sign Up</h2>
+        <p>Please fill out this form to create an account.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+
+        </form>
+    </body>
+</html>
+
+
+<!--DOCTYPE html>
 
 <html>
     <head>
@@ -159,4 +150,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </form>
     </body>
-</html>
+</html-->
