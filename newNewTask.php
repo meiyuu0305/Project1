@@ -31,11 +31,11 @@
             $assignedMemberErr = "A team member must be assigned to the task.";
         }
         else {
-            if (!preg_match('/^[a-zA-Z]+$/', trim($_POST["assignedMember"]))) {
+            if (!preg_match('/^[a-zA-Z]+$/', test_input($_POST["assignedMember"]))) {
                 $assignedMemberErr = "Team member name should only contain letters.";
             }
             else {
-                $assignedMember = test_input($_POST["assignedMember"]);
+                $assignedMember = htmlspecialchars(stripslashes(($_POST["assignedMember"])));
                 $assignedMemberErr = "";
             }
         }
