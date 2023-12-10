@@ -105,10 +105,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <title>Sign Up</title>
     </head>
     <body>
-        <h2>Sign Up</h2>
-        <p>Please fill out this form to create an account.</p>
+        
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-        <div>
+        <fieldset>
+            <legend>Sign Up</legend>
+            <p>Please fill out this form to create an account.</p>
+            <div>
                 <label>Username:</label>
                 <input type="text" name="username" value="<?php echo $user; ?>">
                 <span class="error">* <?php echo $username_err; ?></span>
@@ -128,6 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="reset" value="Reset">
                 <a href="login.php"><button>Login here</button></a>
             </div>
+        </fieldset>
         </form>
     </body>
 </html>
