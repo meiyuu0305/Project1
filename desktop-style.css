@@ -519,7 +519,7 @@ html.form {
     grid-template-areas: "menu1 body";
 }
 
-html.form p {
+fieldset p {
     color: rgb(245, 245, 245);
 }
 

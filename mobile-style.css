@@ -433,7 +433,7 @@ html.form body {
     grid-column: 2;
 }
 
-html.form p {
+fieldset p {
     color: rgb(245, 245, 245);
 }
 
