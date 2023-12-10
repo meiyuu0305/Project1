@@ -1,5 +1,7 @@
 <?php
 
+    
+
     $task = $dueDate = $assignedMember = "";
     $taskErr = $dueDateErr = $assignedMemberErr = "";
 
@@ -70,7 +72,7 @@
         <div class="container">
             <p class="title">Adding a New Task</p>
             <div class = "menu1">
-                <ul class = "menu_content"> 
+                <ul class = "menu_content">
                     <li><a id="account_name" class="link" href="team.html"> Team Java </a></li> <!-- Task: Add links -->
                     <li><a class= link href="frontpage.html">Front Page</a></li>
                     <li><a class="link" href="person1.html"> Person 1 </a></li>
