@@ -31,7 +31,7 @@
             $assignedMemberErr = "A team member must be assigned to the task.";
         }
         else {
-            if (!preg_match('/^[a-zA-Z]+$/', test_input($_POST["task"]))) {
+            if (!preg_match('/^[a-zA-Z]+$/', trim($_POST["assignedMember"]))) {
                 $assignedMemberErr = "Team member name should only contain letters.";
             }
             else {
@@ -47,14 +47,6 @@
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
-    }
-
-    //date validation technique comes from https://www.codexworld.com/how-to/validate-date-input-string-in-php/
-    function test_date($date, $format = "Y-m-d") {
-        $d = DateTime::createFromFormat($format, $date);
-        return $d && $d->format($format) === $date;
-
-
     }
 
 ?>
