@@ -5,7 +5,7 @@ session_start();
 
 //if user is logged in, send them to front page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggenin"] === true) {
-    header(location: front_page.html);
+    header(location: frontpage.html);
     exit;
 }
 
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             session_start();
                             $_SESSION["loggenin"] = true;
                             $_SESSION["username"] = $user;
-                            header("location: front_page.html");
+                            header("location: frontpage.html");
                         }
                         else {
                             $login_err = "Invalid username or password.";
