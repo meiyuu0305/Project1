@@ -59,9 +59,9 @@
                     <li><a id="account_name" class="link" href="team.html"> Team Java </a></li> <!-- Task: Add links -->
                     <li><a class= link href="frontpage.html">Front Page</a></li>
                     <li><a class="link" href="person1.html"> Person 1 </a></li>
+                    <!--li><a id="sub_link"> Sub links </a></li>
                     <li><a id="sub_link"> Sub links </a></li>
-                    <li><a id="sub_link"> Sub links </a></li>
-                    <li><a id="sub_link"> Sub links </a></li>
+                    <li><a id="sub_link"> Sub links </a></li-->
                     <li><a class="link" href="person2.html"> Person 2 </a></li>
                     <li><a class="link" href="person3.html"> Person 3 </a></li>
                     <li><a class="link" href="person4.html"> Person 4 </a></li>
@@ -71,6 +71,7 @@
                     <li><a class="link" href="newNewTask.php">Add New Task</a></li>
                     <li><a class="link" href="progress_page.html"> Progress </a></li>
                     <li><a id="settings" href="settings.html"> Settings </a></li>
+                    <li><a class="link" href="logout.php">Log Out </a><li>
                 </ul>
             </div>
 
