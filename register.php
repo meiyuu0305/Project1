@@ -92,9 +92,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html class="form">
     <head>
+        <link rel="stylesheet" media='screen and (max-width: 480px)' href="mobile-style.css">
+        <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 768px)" href="tablet-style.css">
+        <link rel="stylesheet" media="screen and (min-width: 769px)" href="desktop-style.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
         <title>Sign Up</title>
     </head>
     <body>
@@ -126,47 +133,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 
 
-<!--DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Sign Up</title>
-    </head>
-    <body>
-        <h2>Sign Up</h2>
-        <p>Please fill out this form to create an account.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-            <div>
-                <label>Username:</label>
-                <input type="text" name="user" value="<?php echo $user; ?>">
-                <span class="error">* <?php echo $user_err; ?></span>
-            </div>
-            <div>
-                <label>Password:</label>
-                <input type="password" name="pass" value="<?php echo $pass; ?>">
-                <span class="error">* <?php echo $pass_err; ?></span>
-            </div>
-            <div>
-                <label>Confirm Password:</label>
-                <input type="password" name="confirm_pass" value="<?php echo $confirm_pass; ?>">
-                <span class="error">* <?php echo $confirm_pass_err; ?></span>
-            </div>
-            <div>
-                <label>First Name:</label>
-                <input type="text" name="firstname" value="<?php echo $firstname; ?>">
-                <span class="error">* <?php echo $firstname_err; ?></span>
-            </div>
-            <div>
-                <label>Last Name:</label>
-                <input type="text" name="lastname" value="<?php echo $lastname; ?>">
-                <span class="error">* <?php echo $lastname_err; ?></span>
-            </div>
-            <div>
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-                <a href="login.php"><button>Login here</button></a>
-            </div>
-        </form>
-    </body>
-</html-->

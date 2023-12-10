@@ -1,5 +1,23 @@
 <?php
 
+//initialize the session
+session_start();
+
+//check if the user is already loggen in, if yes then redirect him to welcome page
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("location: welcome.php");
+    exit;
+}
+
+//include config file
+require_once "config.php";
+
+
+
+?>
+
+/*<?php
+
 //initialize session
 session_start();
 
@@ -71,9 +89,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($pdo);
 }
 
-?>
+?>*/
 
-<!DOCTYPE html>
+<!--DOCTYPE html>
 
 <html>
     <head>
@@ -108,5 +126,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </form>
     </body>
-</html>
+</html-->
 
