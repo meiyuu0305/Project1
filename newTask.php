@@ -35,7 +35,7 @@
             $dueDateErr = "";
             //}
         }
-        if (empty($_POST["assignedMember"]) || empty(trim($_POST["assignedMember"]))) {
+        if (empty(trim($_POST["assignedMember"]))) {
             $assignedMemberErr = "A team member must be assigned to the task.";
         }
         else {
