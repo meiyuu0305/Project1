@@ -1,5 +1,5 @@
-const formLogin = document.querySelector("#register_form");
-formLogin.addEventListener("submit", function (e) {
+const formRegister = document.querySelector("#register_form");
+formRegister.addEventListener("submit", function (e) {
     //get and verify username field
     let username = document.querySelector("#username").value;
     if(username==null || username=="") {
