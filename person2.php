@@ -33,9 +33,7 @@
                     <li><a id="account_name" class="link" href="team.php"> User </a></li> <!-- Task: Add links -->
                     <li><a class= link href="frontpage.php">Front Page</a></li>
                     <li><a class="link" href="person1.php"> Person 1 </a></li>
-                    <li><a id="sub_link"> Sub links </a></li>
-                    <li><a id="sub_link"> Sub links </a></li>
-                    <li><a id="sub_link"> Sub links </a></li>
+                    
                     <li><a class="link" href="person2.php"> Person 2 </a></li>
                     <li><a class="link" href="person3.php"> Person 3 </a></li>
                     <li><a class="link" href="person4.php"> Person 4 </a></li>
