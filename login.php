@@ -107,18 +107,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <title>Login</title>
     </head>
     <body>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+        <form id="login_form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
         <fieldset>
             <legend>Log In</legend>
             <p>Use your username and password to log in.</p>
             <div>
-                <label>Username:</label>
-                <input type="text" name="username" value="<?php echo $username; ?>">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" value="<?php echo $username; ?>">
                 <span class="error">* <?php echo $username_err; ?></span>
             </div>
             <div>
-                <label>Password:</label>
-                <input type="password" name="password" value="<?php echo $password; ?>">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" value="<?php echo $password; ?>">
                 <span class="error">* <?php echo $password_err; ?></span>
             </div>
             <div>
