@@ -12,7 +12,7 @@
     $taskErr = $dueDateErr = $assignedMemberErr = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["task"]) || empty(trim($_POST["task"]))) {
+        if (empty(trim($_POST["task"]))) {
             $taskErr = "Task description is required.";
         }
         else {
