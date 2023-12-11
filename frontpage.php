@@ -40,7 +40,7 @@
                     <li><a class="link" href="newNewPerson.php">Add New Team Member</a></li>
                     <li><a class="link" href="newNewTask.php">Add New Task</a></li>
                     <li><a class="link" href="progress_page.php"> Progress </a></li>
-                    <li><a id="settings" href="settings.html"> Settings </a></li>
+                    
                     <li><a class="link" href="logout.php">Log Out </a><li></li>
                 </ul>
                 </div>
