@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div>
                 <input type="submit" value="Login">
                 <input type="reset" value="Reset">
-                <p>Don't have an account? <a href="register.php">Sign up now</a></p>
+                <p>Don't have an account? <a href="register.php"><button>Sign up now</button></a></p>
             </div>
         </fieldset>
         </form>
