@@ -106,23 +106,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </head>
     <body>
         
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+        <form id="register_form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
         <fieldset>
             <legend>Sign Up</legend>
             <p>Please fill out this form to create an account.</p>
             <div>
-                <label>Username:</label>
-                <input type="text" name="username" value="<?php echo $user; ?>">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" value="<?php echo $user; ?>">
                 <span class="error">* <?php echo $username_err; ?></span>
             </div>
             <div>
-                <label>Password:</label>
-                <input type="password" name="password" value="<?php echo $pass; ?>">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" value="<?php echo $pass; ?>">
                 <span class="error">* <?php echo $password_err; ?></span>
             </div>
             <div>
-                <label>Confirm Password:</label>
-                <input type="password" name="confirm_password" value="<?php echo $confirm_pass; ?>">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" value="<?php echo $confirm_pass; ?>">
                 <span class="error">* <?php echo $confirm_password_err; ?></span>
             </div>
             <div>
@@ -132,6 +132,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </fieldset>
         </form>
+        <script src="register.js">
+        </script>
     </body>
 </html>
 
