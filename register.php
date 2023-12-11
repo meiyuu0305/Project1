@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div>
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
-                <p>Already have an account? <a href="login.php">Log in here.</a></p>
+                <p>Already have an account? <button><a href="login.php">Log in here.</a></button></p>
             </div>
         </fieldset>
         </form>
