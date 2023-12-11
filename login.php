@@ -135,6 +135,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </fieldset>
         </form>
+        <script src="login.js">
+        </script>
     </body>
 </html>
 
