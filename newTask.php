@@ -102,18 +102,18 @@
             <fieldset>
                 <legend>Add New Task:</legend>
                 <div>
-                    <label for="f-task">Task: </label>
-                    <input type="text" name="task" id="f-task" placeholder="Enter task name here..."/>
+                    <label for="task">Task: </label>
+                    <input type="text" name="task" id="task" placeholder="Enter task name here..."/>
                     <span class="error">* <?php echo $taskErr; ?></span>
                 </div>
                 <div>
-                    <label for="f-dueDate">Due Date: </label>
-                    <input type="date" name="duedate" id="f-dueDate"/>
+                    <label for="dueDate">Due Date: </label>
+                    <input type="date" name="duedate" id="dueDate"/>
                     <span class="error">* <?php echo $dueDateErr; ?></span>
                 </div>
                 <div>
                     <label for="f-teamMember">Assigned Team Member: </label>
-                    <input type="text" name="assignedMember" id="f-teamMember" placeholder="First and last name"/>
+                    <input type="text" name="assignedMember" id="teamMember" placeholder="First and last name"/>
                     <span class="error">* <?php echo $assignedMemberErr; ?></span>
                 </div>
                 <div>
