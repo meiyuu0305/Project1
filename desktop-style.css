@@ -268,7 +268,7 @@ body{
 }
 
 
-input[type=text], select {
+input[type=text], select, input[type=password] {
     width: 100%;
     padding: 12px 20px;
     display: block;
