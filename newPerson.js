@@ -4,15 +4,15 @@ personJSONText.innerHTML = localStorage.getItem("JSONInfoPerson");
 const formPerson = document.querySelector("#personForm");
 formPerson.addEventListener("submit", function (e) {
     //get and verify first name field
-    let fname = document.querySelector("#f-firstname").value;
-    if(fname==null || fname=="") {
+    let firstname = document.querySelector("#firstname").value;
+    if(firstname==null || firstname=="") {
         alert("Enter first name");
         e.preventDefault();
         return;
     }
     //get and verify last name filed
-    let lname = document.querySelector("#f-lastname").value;
-    if(lname==null || lname=="") {
+    let lastname = document.querySelector("#lastname").value;
+    if(lastname==null || lastname=="") {
         alert("Enter last name");
         e.preventDefault();
         return;

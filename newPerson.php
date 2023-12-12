@@ -89,13 +89,13 @@
             <fieldset>
                 <legend>Add New Team Member</legend>
                 <div>
-                    <label for="f-firstname">First Name: </label>
-                    <input type="text" name="firstname" placeholder="First" id="f-firstname" />
+                    <label for="firstname">First Name: </label>
+                    <input type="text" name="firstname" placeholder="First" id="firstname" />
                     <span class="error">* <?php echo $firstnameErr; ?></span>
                 </div>
                 <div>
-                    <label for="f-lastname">Last Name: </label>
-                    <input type="text" name="lastname" placeholder="Last" id="f-lastname" />
+                    <label for="lastname">Last Name: </label>
+                    <input type="text" name="lastname" placeholder="Last" id="lastname" />
                     <span class="error">* <?php echo $lastnameErr; ?></span>
                 </div>
                 <div>
