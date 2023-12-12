@@ -4,22 +4,22 @@
 const formTask = document.querySelector("#taskForm");
 formTask.addEventListener("submit", function (e) {
     //get and verify task name
-    let ftask = document.querySelector("#task").value;
-    if(ftask==null || ftask=="") {
+    let task = document.querySelector("#task").value;
+    if(task==null || task=="") {
         alert("Enter a task to be assigned");
         e.preventDefault();
         return;
     }
     //get and verify due date
-    let fdueDate = document.querySelector("#dueDate").value;
-    if(fdueDate==null || fdueDate=="") {
+    let dueDate = document.querySelector("#dueDate").value;
+    if(dueDate==null || dueDate=="") {
         alert("Choose a due date");
         e.preventDefault();
         return;
     }
     //get and verify team member field
-    let fteamMember = document.querySelector("#teamMember").value;
-    if(fteamMember==null || fteamMember=="") {
+    let teamMember = document.querySelector("#assignedMember").value;
+    if(teamMember==null || teamMember=="") {
         alert("Choose a team member to assign the task to");
         e.preventDefault();
         return;

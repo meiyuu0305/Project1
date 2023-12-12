@@ -112,8 +112,8 @@
                     <span class="error">* <?php echo $dueDateErr; ?></span>
                 </div>
                 <div>
-                    <label for="teamMember">Assigned Team Member: </label>
-                    <input type="text" name="assignedMember" id="teamMember" placeholder="First and last name"/>
+                    <label for="assignedMember">Assigned Team Member: </label>
+                    <input type="text" name="assignedMember" id="assignedMember" placeholder="First and last name"/>
                     <span class="error">* <?php echo $assignedMemberErr; ?></span>
                 </div>
                 <div>
