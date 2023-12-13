@@ -98,7 +98,8 @@
                 </ul>
             </div>
 
-        <form id="taskForm" method="post">
+        <form id="taskForm" method="post"
+            action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
             <fieldset>
                 <legend>Add New Task:</legend>
                 <div>
