@@ -268,7 +268,7 @@ body{
 }
 
 
-input[type=text], select {
+input[type=text], select, input[type=password] {
     width: 100%;
     padding: 12px 20px;
     display: block;
@@ -627,9 +627,11 @@ html.form body {
     grid-column: 2;
 }
 
-html.form div label {
+#login_form p, html.form div label {
     color: rgb(245, 245, 245);
 }
+
+
 
 div span.error {
     color: rgb(245, 245, 245);

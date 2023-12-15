@@ -433,7 +433,7 @@ html.form body {
     grid-column: 2;
 }
 
-fieldset p {
+#login_form p {
     color: rgb(245, 245, 245);
 }
 
