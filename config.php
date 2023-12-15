@@ -17,7 +17,12 @@ https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php*/
         $sql = "CREATE DATABASE IF NOT EXISTS login_db";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
+        //reestablish connection for $pdo to newly created database
+        $pdo = null;
+        $connString = "mysql:host=localhost;port=3306;database=login_db";
+        $pdo = new PDO($connString, $db_username, $db_password);
         echo "Connection established and database created.";
+
     }
     catch (PDOException $e) {
         die("ERROR: Could not connect. " . $e->getMessage());
