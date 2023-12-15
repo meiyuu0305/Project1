@@ -43,6 +43,7 @@ if (isset($_POST['remove'])){
     <div id="highlight" style="background-color: none;"> Purchase your <span style="background-color: #a669f0; padding:0px 20px; "> key to success </span> </div>
     <img  style="position:absolute; right:150px; background-color: #e3cbff74; border-radius:  80% 20% 32% 68% / 58% 22% 78% 42%; " src="./upload/store-background.png" >
     <a href="index.php"> <img src="./upload/arrow.png" style="margin: 30px 30px; width: 40px"></a>
+    <a href="order_his.php"><button class ="shopping-bag" style="right:70px;"><img src="purchase_his.png" style="object-fit: cover; justify-content: center; height:100%; width:100%;"></button></a>
     <a href="cart.php" ><button class ="shopping-bag"><img src="./upload/shopping-bag-icon.png" style="object-fit: cover; justify-content: center; height:100%; width:100%"></button></a>
 </section>
 <section style ="display:grid; grid-template-columns: 47% 47%; width: 100%; column-gap:20px;">
