@@ -83,5 +83,37 @@ class CreateDb
             return $result;
         }
     }
+        public function matchUserID($val){
+        $con = mysqli_connect("localhost", "root", "", "Productdb");
+        $stmt = $con->prepare("SELECT order_id FROM orders WHERE cus_id = ?");
+        $stmt->bind_param('s', $val); // 's' indicates a string parameter
+        $stmt->execute();
+        $stmt->bind_result($order_id);
+
+        $allOrders = array();
+        while ($stmt->fetch()) {
+        array_push($allOrders, $order_id); }
+
+        $stmt->close();
+        mysqli_close($con);
+
+    return $allOrders;
+    }
+
+    public function eachOrder($val){
+
+        $con = mysqli_connect("localhost", "root", "", "Productdb");
+        $stmt = $con->prepare("SELECT product_id, price FROM order_item WHERE order_id = ?");
+        $stmt->bind_param('i', $val); // 'i' indicates an int parameter
+        $stmt->execute();
+        $stmt->bind_result($product_id, $price);
+
+        $speciOrders = array();
+        while ($stmt->fetch()) {
+        array_push($speciOrders, $product_id,$price); }
+        $stmt->close();
+        mysqli_close($con);
+        return $speciOrders;
+    }
 
 }
