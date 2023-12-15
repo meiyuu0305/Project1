@@ -50,7 +50,8 @@ class CreateDb
              creditCard VARCHAR (13) NOT NULL, 
              zip INT(5),
              shipping_loca VARCHAR(200),
-             order_id VARCHAR(11)
+             order_id VARCHAR(11),
+             cus_id INT(5)
             );";
              $sql2 = " CREATE TABLE IF NOT EXISTS order_item
              (order_id INT(11),

@@ -1,5 +1,5 @@
 <?php
-function Cus_ID($id, $username){
+function Cus_ID($username){
     $con = mysqli_connect("localhost", "root", "root","time_management_proj");
     $stmt = $pdo->prepare("SELECT id FROM users WHERE username = :username");
     $stmt->bindParam(':username', $username, PDO::PARAM_STR);
