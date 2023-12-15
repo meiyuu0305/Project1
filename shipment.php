@@ -21,7 +21,7 @@ $db = new CreateDb("Productdb", "Producttb");
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Shipment</title>
 </head>
-<body>
+<body style ="background-image:none">
 <section class = "payment-header">
     <div class = "store-head" style="font-size: 60px; position: absolute; left: 650px; top: 30px;"> Galaxy Store </div>
     <a href="index.php"> <img src="./upload/arrow.png" style="margin: 30px 30px; width: 40px;"></a>
