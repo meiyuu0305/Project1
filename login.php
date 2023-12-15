@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //validate credentials
     if (empty($username_err) && empty($password_err)) {
         //prepare sql statement
-        $sql = "SELECT id, username, password FROM users WHERE username = :username";
+        $sql = "SELECT id, username, password FROM logins WHERE username = :username";
         if ($stmt = $pdo->prepare($sql)) {
             //bind variables to prepared statement
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
