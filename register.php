@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else {
         //prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = :username";
+        $sql = "SELECT id FROM logins WHERE username = :username";
         //attempt to execute select statement
         if ($stmt = $pdo->prepare($sql)) {
             //bind variables to the prepared statement as parameters
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     //check input errors before inserting in database
     if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
-        $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
+        $sql = "INSERT INTO logins (username, password) VALUES (:username, :password)";
         if ($stmt = $pdo->prepare($sql)) {
             //bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);

@@ -14,7 +14,7 @@ class CreateDb
         $tablename = "Productdb",
         $servername = "localhost",
         $username = "root",
-        $password = ""
+        $password = "root"
     )
     {
       $this->dbname = $dbname;
