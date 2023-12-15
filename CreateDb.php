@@ -44,8 +44,27 @@ class CreateDb
                              price FLOAT(7,2),
                              img text
                             );";
+            $sql1 = " CREATE TABLE IF NOT EXISTS orders
+            (name VARCHAR(30) NOT NULL,
+             phone VARCHAR (15) NOT NULL,
+             creditCard VARCHAR (13) NOT NULL, 
+             zip INT(5),
+             shipping_loca VARCHAR(200),
+             order_id VARCHAR(11)
+            );";
+             $sql2 = " CREATE TABLE IF NOT EXISTS order_item
+             (order_id INT(11),
+             product_id VARCHAR(11),
+             price FLOAT(4,2)
+             );";
 
             if (!mysqli_query($this->con, $sql)){
+                echo "Error creating table : " . mysqli_error($this->con);
+            }
+            if (!mysqli_query($this->con, $sql1)){
+                echo "Error creating table : " . mysqli_error($this->con);
+            }
+            if (!mysqli_query($this->con, $sql2)){
                 echo "Error creating table : " . mysqli_error($this->con);
             }
 
