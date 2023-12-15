@@ -55,7 +55,7 @@ if (isset($_POST['add'])){
     <div class = "store-head" > Galaxy Store </div>
     <div id="highlight" style="background-color: none;"> team work makes the <span style="background-color: #a669f0; padding:0px 20px; "> dream</span> work</div>
     <img  style="position:absolute; right:150px" src="./upload/store-background.png" >
-    <a href="frontpage.html" ><img src="./upload/home.png" style="margin: 30px 30px; width: 40px"> </a>
+    <a href="frontpage.php" ><img src="./upload/home.png" style="margin: 30px 30px; width: 40px"> </a>
     <a href="cart.php" ><button class ="shopping-bag"><img src="./upload/shopping-bag-icon.png" style="object-fit: cover; justify-content: center; height:100%; width:100%"></button></a>
 </section>
 <section class = "store-scroll-menu">

@@ -85,6 +85,6 @@
             </div>
         </div>
     </div>
-    <div  background-color: goldenrod;><a class="store" href="store.html"> Purchase </a> </div>
+    <div  background-color: goldenrod;><a class="store" href="index.php"> Purchase </a> </div>
 </body>
 </html>
