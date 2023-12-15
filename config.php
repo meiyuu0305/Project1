@@ -19,7 +19,7 @@ https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php*/
         $stmt->execute();
         //reestablish connection for $pdo to newly created database
         $pdo = null;
-        $connString = "mysql:host=localhost;port=3306;database=login_db";
+        $connString = "mysql:host=localhost;port=3306;dbname=login_db";
         $pdo = new PDO($connString, $db_username, $db_password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //create table to store logins
