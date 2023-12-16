@@ -552,6 +552,12 @@ input[type=text], select {
     font-family: 'Teko', sans-serif;
     text-align: center;
 }
+.info input:invalid {
+    border: 2px dashed red;
+}
+.info input:valid {
+    border: 2px dashed black;
+}
 /* Rebecca's styling */
 
 html.person {
