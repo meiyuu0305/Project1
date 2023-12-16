@@ -59,24 +59,21 @@ $total = (float)$tax_perc + (float)$deli_perc + (float)$total;
     <form action="placeorder.php" class="info" method="POST">
         <div style="width:50%; float:left">
         <label for="name" >Full Name</label>
-        <input type="text" name="name" ></div>
+        <input type="text" name="name" required minlength="2" maxlength="30"  ></div>
 
         <div style="width:50%; float:right">
         <label for="phone">Phone</label>
-        <input type="text" name="phone" ></div>
+        <input type="text" name="phone"required minlength="6" maxlength="14" ></div>
 
         <div style="width:50%; float:left">
         <label for="creditCard">Credit Card</label>
-        <input type="text" name="creditCard"> </div>
+        <input type="text" name="creditCard" required minlength="10" maxlength="15" > </div>
 
         <div  style="width:50%; float:right">
-        <label for="zip">Zip Code</label>
+        <label for="zip" required minlength="3" maxlength="6" >Zip Code</label>
         <input type="text" name="zip"></div>
 
         <div>
-        <label for="address"> Shipping Adress</label>
-        <input type="text" name="address" style="width:97.5%; height: 150px;">
-        </div>
         <button type="submit" name ="placeorderBt" class="bt-checkout" style="width:200px;font-size:25px">Place order</button>
     </form>
 </section>
